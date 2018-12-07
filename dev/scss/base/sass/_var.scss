@@ -1,8 +1,25 @@
-
 // colors
-$color_main: #66ccff;
+
+$yellow: 	#ffd503;
+$blue: 		#006eb3;
+$orange: 	#fc8200;
+$green: 	#33cc4f;
+
+// серые начиная от самого светлого
+$gray1: 	#ededed;
+$gray2:		#cccccc;
+$gray3: 	#808080;
+$gray4: 	#666666;
+$black: 	#1a1a1a;
 
 
+
+
+
+
+
+// blue
+$color_main: red;
 $color_main-r: #c32429;
 $color_main-b: #1d3ea0;
 
@@ -22,9 +39,10 @@ $color_blue-l: #4ba1d2;
 $color_font: #323232;
 
 
-// fonts
 
-$p: 16px;
+
+
+
 
 // grid
 $col-width: 100% / 12;
@@ -34,4 +52,9 @@ $col-width: 100% / 12;
 // gutters
 $gutter: 20px;
 
-$tr: 250ms;
+
+// transitions from fast to slow
+$tr: 10ms;
+$tr1: 250ms;
+$tr2: 450ms;
+$tr3: 650ms;

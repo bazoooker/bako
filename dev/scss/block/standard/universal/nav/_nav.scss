@@ -5,45 +5,35 @@
 // 	с дропдауном
 
 .nav {
-	@include flex-row(nowrap, flex-start, center);
-	z-index: 2;
-
 	a {
 		position: relative;
-		margin: 0 0 0 0;
-		padding: 1.2rem .9rem;
-
-		font-weight: 400;
-		font-size: 1.3rem;
-
+		display: inline-block;
+		padding: 15px 0;
+		margin: 0 50px 0 0;
+		font-size: 14px;
+		color: $gray4;
+		transition: $tr3;
 		text-decoration: none;
 
-		cursor: pointer;
-		transition: $tr;
+		&:last-child {margin-right:0;}
 		
-		&:last-child {
-			margin-right: 0;
-		}
+		// ВЕРНУТЬ!
+		
+			// &:hover {
+			// 	text-decoration: none;
+			// 	&::before {width: 100%;}
+			// }
 
-		&::after {
+		&::before {
 			@include pseudo;
-			width: 100%;
-			height: 2px;
 			left: 0;
-			bottom: -.2rem;
-			background-color: $color_font;
-			opacity: 0;
+			bottom: 0;
+			height: 3px;
+			width: 0%;
+			background-color: $yellow;
+			
+			transition: $tr3;
 
-			transform: translateY(-4px);
-			transition: $tr;
-		}
-
-		&:hover {
-			color: $color_main;
-		}
-
-		&.active {
-			font-weight: 600;
 		}
 	}
 }

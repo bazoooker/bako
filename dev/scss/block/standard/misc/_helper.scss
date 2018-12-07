@@ -33,35 +33,6 @@
     p:last-child {
         margin: 0 0 0 0;
     }
-
-    // &:after {
-    //  position: absolute;
-    //     content: '';
-    //     bottom: 0;
-    //     transform: translateX(-50%);
-    //     left: 50%;
-    //     width: 3.5rem;
-    //     height: .2rem;
-    //     background: #5facd7;
-    //     opacity: .8;
-
-    //     transition: 300ms;
-    // }
- 
-    // &:after {
-    //  position: absolute;
-    //     content: ' ? ';
-    //     top: -4.2rem;
-    //     left: -3.5rem;
-    //     width: 4rem;
-    //     height: 100%;
-    //     font-size: 15.2rem;
-    //     color: #b0d5f5;
-    //     transform: rotate(15deg);
-    //     opacity: .18;
-
-    //     transition: 300ms;
-    // }
 }
 
 
@@ -89,8 +60,6 @@
 .stretch {
     // полноразмерная растажка без закрытия .container
     position: relative;
-    padding: $gutter*2 0;
-    margin: 0 0 $gutter*2 0;
     z-index: 2;
 
     .row { margin-bottom: 0; }
@@ -105,9 +74,9 @@
         z-index: -1;
     }
 }
-    .stretch_blue {
+    .stretch_gray {
         &:before {
-            background-color: #6699cc;
+            background-color: $gray1;
         }
     }
 
@@ -118,24 +87,10 @@
 .full-width {
     width: 100%;
 }
-.no-top-gutter {
-    margin-top: -$gutter;
-}
-// .section-margin {
-// 	margin-bottom: $gutter;
-// }
-
-
 
 
 // разное
 
-.bg-gray {
-    background-color: #eee;
-}
-.bg {
-	background-color: #f5f5f0;
-}
 .no-scroll {
 	overflow: hidden;
 }

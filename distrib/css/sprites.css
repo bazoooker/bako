@@ -1,27 +1,5 @@
-.icon {
-	position: relative;
-	display: inline-block;
-	transition: $tr2;	
-}
-
-.icon_rounded {
-	width: 52px;
-	height: 52px;
-	border: 1px solid $gray2;
-	border-radius: 50%;
-	margin: 0 15px 0 0;
-}
-
-
-
-
-.i {
-	@include center;
-	transition: $tr2;
-}
-
 .i-star-outline_small, .view-cards_active, .view-cards_disabled, .view-list_active, .view-list_disabled, .i-breadcrumb-arrow, .i-caret_down, .i-caret_up, .i-caret-small_down, .i-cart, .i-cart_filled, .i-check-filter, .i-checkmark, .i-lock, .i-mail, .i-phone, .i-pin, .i-search, .i-star, .i-star-filled_small{
-	background: url(/img/icons/sprites.png) no-repeat;
+	background: url(sprites.png) no-repeat;
 }
 
 .i-star-outline_small{
