@@ -1,0 +1,11 @@
+.icon-text {
+	@include flex-row(nowrap,flex-start,flex-start);
+}
+
+.icon-text__icon {
+	margin: 0 $gutter 0 0;
+	img {
+		margin-top: 9px;
+	}
+}
+.icon-text__text {}

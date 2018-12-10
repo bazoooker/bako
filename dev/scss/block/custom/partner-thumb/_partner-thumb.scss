@@ -1,0 +1,54 @@
+.partner-thumb {
+	height: 140px;
+	@include flex-row(nowrap,center,center);
+	border: 1px solid $gray2;
+
+	&:first-child {
+		margin-right:-1px;
+	}
+}
+
+.partner-thumb__img-holder {
+	height: 60%;
+	width: 60%;
+	@include bg-contain;
+}
+
+.partner-thumb__link {
+	background-color: $yellow;
+	color: $black;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 600;
+	text-decoration: none;
+
+	span {
+		position: relative;
+		display: inline-block;
+		padding-right: 21px;
+		text-decoration: none;
+
+		&::before {
+			@include pseudo;
+			right: 0;
+			top: 50%;
+			transform: translateY(-35%) rotate(-45deg);
+
+			width: 8px;
+			height: 8px;
+			border-right: 2px solid $black;
+			border-bottom: 2px solid $black;
+			transition: $tr2;
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+
+		span {
+			&::before {
+				transform: translateY(-35%) translateX(4px) rotate(-45deg) ;
+			}
+		}
+	}
+}

@@ -11,8 +11,9 @@
 	font-weight: 600;
 	cursor: pointer;
 	line-height: 100%;
-	border-radius: 30px;
-	transition: $tr;
+	text-transform: uppercase;
+
+	transition: $tr2;
 	&:hover {
 		text-decoration: none;
 	}
@@ -29,11 +30,11 @@
 // styles
 .btn_main {
 	// background-color: $color_main;
-	background-color: #6600ff;
-	color: #fff;
+	background-color: $yellow;
+	color: $black;
 	border: 1px solid transparent;
 	&:active,
-	&:visited 	{ color: #fff; }
+	&:visited 	{ color: $black; }
 	&:hover 	{ background-color: darken($color_main, 8%) }
 	&:focus 	{}
 }
@@ -177,7 +178,7 @@
 
 .btn_size-l {
 	@include font-kit(17px, 17px, 17px, 16px, 15px);
-	padding: $gutter/1.6 $gutter*1.75;
+	padding: 20px 30px;
 }
 .btn_size-m {
 	@include font-kit(15px, 15px, 14px, 14px, 13px);
@@ -190,54 +191,149 @@
 
 
 
+
+
+
+
+.btn-catalog {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	padding: 0 58px 0 80px;
+	margin: 0 $gutter 0 0;
+	background-color: $gray3;
+	color: rgba(255,255,255,.85);
+	@include flex-row(nowrap,flex-start,center);
+    align-items: center;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: .3px;
+    min-width: 283px;
+    cursor: pointer;
+	transition: $tr2;
+
+    &::before {
+    	@include pseudo;
+    	right: 30px;
+    	top: 50%;
+		transform: translateY(-70%) rotate(45deg);
+
+		width: 8px;
+		height: 8px;
+
+		border-bottom: 2px solid rgba(255,255,255,.85);
+		border-right: 2px solid rgba(255,255,255,.85);
+
+		transition: $tr2;
+		animation-delay: 2s;
+		transition-delay: 2s;
+
+    }
+    
+	// ВЕРНУТЬ
+
+    // &:hover {
+    // 	color: #fff;
+    // 	&::before {
+    // 		color: #fff;
+    // 		animation: arrowBounceDown $tr2 ease;
+    // 	}
+    // 	.i-burger__bar {background-color: #fff;}
+    // }
+}
+
+.btn-basket {
+	position: relative;
+	@include flex-row(nowrap,flex-start,center);
+	padding: 0 15px 0 42px;
+	height: 100%;
+	flex-grow:0;
+	min-width: 178px;
+	cursor: pointer;
+
+	.i-cart {
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.btn-basket__text {
+	display: inline-block;
+	margin: 0 8px 0 0;
+	font-weight: 600;
+	font-style:normal;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: black;
+}
+
+.btn-basket__total {
+	font-weight: 400;
+	font-style:normal;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: black;
+}
+
+
+
+
+
+
+
+
+
+
 // burger button
 
 
-.btn-burger {
-	@include flex-col(nowrap, center, center);
-	width: 50px;
-	height: 44px;
-	margin: 0 0 0 0;
-	cursor: pointer;
-    transition: 200ms;
+// .btn-burger {
+// 	@include flex-col(nowrap, center, center);
+// 	width: 50px;
+// 	height: 44px;
+// 	margin: 0 0 0 0;
+// 	cursor: pointer;
+//     transition: 200ms;
 
-    // change
-	background-color: black;
-}
-.btn-burger__bar {
-	position: relative;
-	width: 20px;
-    height: 2px;
-    margin-bottom: 5px;
-    background-color: #fff;
-    background-color: rgba(255,255,255,.6);
-    transition: $tr;
-    transform-origin: center, center;
+//     // change
+// 	background-color: black;
+// }
+// .btn-burger__bar {
+// 	position: relative;
+// 	width: 20px;
+//     height: 2px;
+//     margin-bottom: 5px;
+//     background-color: #fff;
+//     background-color: rgba(255,255,255,.6);
+//     transition: $tr;
+//     transform-origin: center, center;
 
-    	&:last-child { margin-bottom: 0; }
+//     	&:last-child { margin-bottom: 0; }
 
-    	&:nth-child(1):after {
-    		transition-delay: 100ms;
-    	}
-    	&:nth-child(2):after {
-    		transition-delay: 200ms;
-    	}
-    	&:nth-child(3):after {
-    		transition-delay: 300ms;
-    	}
+//     	&:nth-child(1):after {
+//     		transition-delay: 100ms;
+//     	}
+//     	&:nth-child(2):after {
+//     		transition-delay: 200ms;
+//     	}
+//     	&:nth-child(3):after {
+//     		transition-delay: 300ms;
+//     	}
 
-    &:after {
-    	@include pseudo;
-    	top: 0;
-    	left: 0;
-    	width: 0%;
-    	height: 100%;
-    	background-color: #fff;
-    	z-index: 4;
+//     &:after {
+//     	@include pseudo;
+//     	top: 0;
+//     	left: 0;
+//     	width: 0%;
+//     	height: 100%;
+//     	background-color: #fff;
+//     	z-index: 4;
 
-    	transition: $tr;
-    }
-}
+//     	transition: $tr;
+//     }
+// }
 
 
 
@@ -404,3 +500,12 @@ input.btn {
     }
 }
 
+
+
+@keyframes arrowBounceDown {
+	0% {}
+	50% {
+		transform: translateY(-40%) rotate(45deg);
+	}
+	100% {}
+}

@@ -1,0 +1,47 @@
+.shop-option {
+	margin-right: 10px;
+	@include flex-row(nowrap,flex-start,center);
+	span {
+		color: $gray3;
+		font-size: 14px;
+		line-height: 1.5;
+		transition: $tr2;
+	}
+	&:hover {
+		text-decoration: none;
+		span {color: $black;}
+		.icon_rounded {
+			border-color: $yellow;
+			box-shadow: 0 0 1px 1px $yellow;
+			// transform: translateY(-4px);
+		}
+	}
+}
+
+.shop-option_visited {
+	flex: 0 1 33.3%;
+}
+.shop-option_fav-list {
+	flex: 0 1 29.3%;
+}
+.shop-option_register {
+	flex: 0 1 37.3%;
+	.icon {
+		flex: 0 0 52px;
+	}
+}
+
+.shop-option__link-list {
+	@include flex-row(wrap,flex-start,center);
+	a {
+		flex: 1 1 100%;
+		color: $gray3;
+		font-size: 14px;
+		line-height: 1.5;
+		transition: $tr2;
+		&:hover {
+			color: $black;
+			transform: translateX(3px);
+		}
+	}
+}

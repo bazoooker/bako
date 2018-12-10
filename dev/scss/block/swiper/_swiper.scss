@@ -29,14 +29,52 @@
 }
 
 
-.swiper-container-hero {
+.swiper-hero {
 	overflow: hidden;
-	height: 60rem;
+	height: 520px;
+	padding-bottom: 60px;
+	margin-bottom: 60px;
 	.swiper-slide {
+		@include bg-cover;
 		.container {
-			@include flex-row(nowrap, flex-end, flex-end);
+			@include flex-row(nowrap, flex-start, center);
 			height: 100%;
+
 		}
+	}
+
+	&>.swiper-pagination-bullets {
+		.swiper-pagination-bullet {
+			border-radius: 0;
+			width: 8px;
+			height: 8px;
+			background-color: $gray2;
+			margin: 0 15px;
+			opacity: 1;
+			transition: $tr2;
+			&:hover {
+				background-color: $gray3;
+			}
+			&.swiper-pagination-bullet-active {
+				background-color: black;
+				box-shadow: 0 0 0px 4px black;
+			}
+		}
+	}
+}
+
+.swiper-hero__offer	{
+	display: inline-block;
+	padding: 60px 80px;
+	border: 8px solid $yellow;
+	p {
+		@include font-kit(36px, 34px, 30px, 28px, 26px);
+		@include line-height-kit(1.55, 1.55, 1.45, 1.4, 1.35);
+		color: black;
+		font-weight: 900;
+		text-transform: uppercase;
+		font-family: 'Exo 2', sans-serif;
+		font-weight: 900;
 	}
 }
 

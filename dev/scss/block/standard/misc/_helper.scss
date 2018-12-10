@@ -74,11 +74,16 @@
         z-index: -1;
     }
 }
-    .stretch_gray {
-        &:before {
-            background-color: $gray1;
-        }
+.stretch_gray {
+    &:before {
+        background-color: $gray1;
     }
+}
+.stretch_yellow {
+    &:before {
+        background-color: $yellow;
+    }
+}
 
 .section {
     margin-bottom: $gutter*2;

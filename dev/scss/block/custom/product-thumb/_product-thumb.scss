@@ -1,0 +1,135 @@
+.product-thumb {
+	position: relative;
+	padding: $gutter;
+	height: 100%;
+	border: 1px solid $gray1;
+	transition: $tr2;
+
+	// ВЕРНУТЬ
+
+	&:hover {
+		box-shadow: 0 0 0 8px $yellow;
+
+		// .product-thumb__badge_new {
+		// 	&::before {
+		// 		opacity: 1;
+		// 		transform: translateX(150px) rotate(45deg);
+		// 	}
+		// }
+	}
+}
+.product-thumb__body {
+	padding: 0 0 $gutter 0;
+	margin: 0 0 $gutter 0;
+	border-bottom: 1px solid $gray1;
+}
+.product-thumb__img {
+	height: 213px;
+	@include bg-contain;
+	margin: 0 0 $gutter 0;
+}
+.product-thumb__name {
+	margin: 0 0 7px 0;
+	text-transform: uppercase;
+	color: $black;
+	font-weight: 800;
+	@include font-kit(16px,16px,16px,15px,14px);
+}
+.product-thumb__articul {
+	@include font-kit(14px,14px,14px,13px,12px);
+	color: $gray3;
+}
+.product-thumb__footer {}
+.product-thumb__avail-price {
+	@include flex-row(nowrap,space-between, flex-end);
+	margin: 0 0 $gutter 0;
+}
+.product-thumb__avail {
+	span,b {
+		display: block;
+		font-size: 14px;
+		line-height: 1.4;
+	}
+	span {color: $gray3;}
+	b {color: $black;}
+}
+.product-thumb__price {
+	@include font-kit(28px,27px,25px,23px,21px);
+	font-weight: 600;
+	color: $black;
+	text-transform: uppercase;
+
+}
+.product-thumb__controls {
+	.product-controls {width: 100%;}
+}
+
+
+.product-thumb__badge {
+	position: absolute;
+	top: $gutter;
+	left: $gutter;
+	padding: 10px;
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: .5px;
+}
+.product-thumb__badge_sale {
+	background-color: $orange;
+	transition: $tr1;
+	&::before {
+		@include pseudo;
+		left: -40px;
+		top: -40px;
+		width: 16px;
+		height: 300%;
+		transform: rotate(45deg);
+		z-index: 2;
+    	background: rgba(255,255,255,.4);;
+    	opacity: 0;
+    	transition: transform 700ms, opacity 10ms;
+    	transition-delay: 350ms;
+		animation: woosh 6s infinite;
+	}
+
+}
+.product-thumb__badge_new {
+	background-color: $green;
+	overflow: hidden;
+
+	&::before {
+		@include pseudo;
+		left: -50%;
+		top: -40px;
+		width: 16px;
+		height: 300%;
+		transform: rotate(45deg);
+		z-index: 2;
+    	background: rgba(255,255,255,.25);
+    	opacity: 0;
+    	transition: transform 700ms, opacity 10ms;
+    	transition-delay: 350ms;
+		animation: woosh 6s infinite;
+	}
+}
+
+.product-thumb__fav {}
+
+@keyframes woosh {
+	0% {
+		opacity: 0;
+		transform: translateX(0px) rotate(45deg);
+	}
+	15% {
+		opacity: 1;
+		transform: translateX(1200%) rotate(45deg);
+	}
+	15.1% {
+		opacity: 0;
+		transform: translateX(0px) rotate(45deg);
+	}
+
+	100% {}
+}

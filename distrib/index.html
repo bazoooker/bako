@@ -10,6 +10,7 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Exo+2:800" rel="stylesheet">
         <link href="http://allfont.ru/allfont.css?fonts=clear-sans" rel="stylesheet" type="text/css" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -71,29 +72,69 @@
                         <span>Принимаем ваши заказы</span>
                     </div>
                     <div class="page-header__shop-controls">
-                        <a href="#" class="page-header__shop-option">
+                        <a href="#" class="shop-option shop-option_visited">
                             <span class="icon icon_rounded">
                                 <i class="i i-checkmark"></i>
                             </span>
                             <span>Просмотренные <br/>товары</span>
                         </a>
-                        <a href="#" class="page-header__shop-option">
+                        <a href="#" class="shop-option shop-option_fav-list">
                             <span class="icon icon_rounded">
                                 <i class="i i-star"></i>
+                                <i class="fav-num fav-num_visible">4</i> <!-- класс fav-num_visible для анимации появления/скрытия -->
                             </span>
                             <span>Список <br/>избранного</span>
                         </a>
-                        <a href="#" class="page-header__shop-option">
+                        <div class="shop-option shop-option_register">
                             <span class="icon icon_rounded">
                                 <i class="i i-lock"></i>
                             </span>
-                            <span>Вход в кабинет</span>
-                            <!-- <span>Регистрация</span> -->
-                        </a>
+                            <div class="shop-option__link-list">
+                                <a href="#">Вход в кабинет</a> 
+                                <a href="#">Регистрация</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="page-header__bottombar container"></div>
+            <div class="page-header__bottombar stretch stretch_yellow">
+                <div class="container">
+                    <span class="btn-catalog btn_catalog-gray">
+                        <span class="i i-burger">
+                            <i class="i-burger__bar"></i>
+                            <i class="i-burger__bar"></i>
+                            <i class="i-burger__bar"></i>
+                        </span>
+                        Каталог товаров
+                    </span>
+                    <div class="search">
+                        <div id="title-search">
+                            <form action="/catalog/search/" class="search-form">
+                                <input id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Искать товар по названию">
+                                <!-- <input name="s" type="submit" value=""> -->
+                            </form>
+                        </div>
+
+<!--                             <script>
+                                BX.ready(function(){
+                                    new JCTitleSearch({
+                                        'AJAX_PAGE' : '/',
+                                        'CONTAINER_ID': 'title-search',
+                                        'INPUT_ID': 'title-search-input',
+                                        'MIN_QUERY_LEN': 2
+                                    });
+                                });
+                            </script> -->
+
+                        </form>
+                    </div>
+                    <span class="btn-basket">
+                        <i class="i i-cart"></i>
+                        <i class="btn-basket__text">корзина</i>
+                        <i class="btn-basket__total">784 929 Р</i>
+                    </span>
+                </div>
+            </div>
         </header>
         <!-- HEADER END --> 
 
@@ -102,6 +143,8 @@
 
         <!-- PAGE CONTENT BEGIN -->            
         <main class="content" role="main">
+
+
 
 
 
@@ -121,7 +164,7 @@
             
 
 
-        <!-- меню на весь экран -->
+        <!-- меню на весь экран использовать для меню -->
         <!--   <div class="menu menu_full-screen menu_active">
             <div class="menu__header">
                 <a href="#" class="phone">(3852)55-55-55</a>
@@ -144,8 +187,11 @@
             </div>
             <div class="menu__btn-close js-menu-controls"></div>
         </div> -->
+
+
+
         
-        <!-- меню справа -->
+        <!-- меню справа  исользовать для корзины-->
         <div class="menu menu_narrow-right">
             <div class="menu__header">
                 <a href="#" class="phone">(3852)55-55-55</a>
@@ -160,122 +206,467 @@
 
 
 
-        <div class="container">
 
-            <div class="stretch stretch_blue">
-                <div class="row">
-                    <div class="col-4">
-                        <h4>Растяжка без смены шаблона</h4>
-                        <div>Эта растяжка сделана без закрытия центрального .container. Больше не нужно делать два шаблона: с контейнером по центру и без него.</div>
-                    </div>
-                    <div class="col-4">
-                        <h4>Растяжка без смены шаблона</h4>
-                        <div>Эта растяжка сделана без закрытия центрального .container. Больше не нужно делать два шаблона: с контейнером по центру и без него.</div>
-                    </div>
-                    <div class="col-4">
-                        <h4>Растяжка без смены шаблона</h4>
-                        <div>Эта растяжка сделана без закрытия центрального .container. Больше не нужно делать два шаблона: с контейнером по центру и без него.</div>
-                    </div>
+<!-- Swiper -->
+  <div class="swiper-container swiper-hero">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url(/img/bg/bg-hero.jpg);">
+            <div class="container">
+                <div class="swiper-hero__offer">
+                    <p>электротехническая
+                    <br/>и сантехническая
+                    <br/>продукция +
+                    <br/>электрощиты</p>
                 </div>
             </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url(/img/bg/bg-hero.jpg);">
+            <div class="container">
+                <div class="swiper-hero__offer">
+                    <p>электротехническая
+                    <br/>и сантехническая
+                    <br/>продукция +
+                    <br/>электрощиты</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url(/img/bg/bg-hero.jpg);">
+            <div class="container">
+                <div class="swiper-hero__offer">
+                    <p>электротехническая
+                    <br/>и сантехническая
+                    <br/>продукция +
+                    <br/>электрощиты</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
 
-            <div class="lead">
+
+<div class="container mb-80">
+    <h2>Популярные товары</h2>
+    
+
+
+    <div class="row">
+        <div class="col-3">
+            <div class="product-thumb">
+                <span class="product-thumb__fav"></span>
+                <div class="product-thumb__body">
+                    <div class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></div>
+                    <p class="product-thumb__name">Провод СИП 4*16 мж</p>
+                    <span class="product-thumb__articul">Артикул ER-10-001</span>
+                </div>
+                <footer class="product-thumb__footer">
+                    <div class="product-thumb__avail-price">
+                        <div class="product-thumb__avail">
+                            <span>В наличии:</span>
+                            <b>больше 10</b>
+                        </div>
+                        <div class="product-thumb__price">
+                            898 999 &#8381;
+                        </div>
+                    </div>
+                    <div class="product-thumb__controls">
+                        <div class="product-controls">
+                            <div class="product-controls__quant">999</div>
+                            <div class="product-controls__arrows">
+                                <span class="product-controls__arrow-up">
+                                    <i class="i i-caret_up"></i>
+                                </span>
+                                <span class="product-controls__arrow-down">
+                                    <i class="i i-caret_down"></i>    
+                                </span>
+                            </div>
+                            <div class="product-controls__btn">в корзину</div>
+                        </div>
+                    </div>
+                </footer>
+
+                <div class="product-thumb__badge product-thumb__badge_sale">распродажа</div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="product-thumb">
+                <span class="product-thumb__fav"></span>
+                <div class="product-thumb__body">
+                    <div class="product-thumb__img" style="background-image: url(/img/goods/prod-2.jpg);"></div>
+                    <p class="product-thumb__name">Провод СИП 4*16 мж</p>
+                    <span class="product-thumb__articul">Артикул ER-10-001</span>
+                </div>
+                <footer class="product-thumb__footer">
+                    <div class="product-thumb__avail-price">
+                        <div class="product-thumb__avail">
+                            <span>В наличии:</span>
+                            <b>больше 10</b>
+                        </div>
+                        <div class="product-thumb__price">
+                            99 876 &#8381;
+                        </div>
+                    </div>
+                    <div class="product-thumb__controls">
+                        <div class="product-controls">
+                            <div class="product-controls__quant">12</div>
+                            <div class="product-controls__arrows">
+                                <span class="product-controls__arrow-up">
+                                    <i class="i i-caret_up"></i>
+                                </span>
+                                <span class="product-controls__arrow-down">
+                                    <i class="i i-caret_down"></i>    
+                                </span>
+                            </div>
+                            <div class="product-controls__btn">в корзину</div>
+                        </div>
+                    </div>
+                </footer>
+
+                <div class="product-thumb__badge product-thumb__badge_new">Новинка</div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="product-thumb">
+                <div class="product-thumb__body">
+                    <div class="product-thumb__img" style="background-image: url(/img/goods/prod-3.jpg);"></div>
+                    <p class="product-thumb__name">Провод СИП 4*16 мж</p>
+                    <span class="product-thumb__articul">Артикул ER-10-001</span>
+                </div>
+                <footer class="product-thumb__footer">
+                    <div class="product-thumb__avail-price">
+                        <div class="product-thumb__avail">
+                            <span>В наличии:</span>
+                            <b>больше 10</b>
+                        </div>
+                        <div class="product-thumb__price">
+                            134 &#8381;
+                        </div>
+                    </div>
+                    <div class="product-thumb__controls">
+                        <div class="product-controls">
+                            <div class="product-controls__quant">12</div>
+                            <div class="product-controls__arrows">
+                                <span class="product-controls__arrow-up">
+                                    <i class="i i-caret_up"></i>
+                                </span>
+                                <span class="product-controls__arrow-down">
+                                    <i class="i i-caret_down"></i>    
+                                </span>
+                            </div>
+                            <div class="product-controls__btn">в корзину</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="product-thumb">
+                <div class="product-thumb__body">
+                    <div class="product-thumb__img" style="background-image: url(/img/goods/prod-4.jpg);"></div>
+                    <p class="product-thumb__name">Провод СИП 4*16 мж</p>
+                    <span class="product-thumb__articul">Артикул ER-10-001</span>
+                </div>
+                <footer class="product-thumb__footer">
+                    <div class="product-thumb__avail-price">
+                        <div class="product-thumb__avail">
+                            <span>В наличии:</span>
+                            <b>больше 10</b>
+                        </div>
+                        <div class="product-thumb__price">
+                            134 &#8381;
+                        </div>
+                    </div>
+                    <div class="product-thumb__controls">
+                        <div class="product-controls">
+                            <div class="product-controls__quant">12</div>
+                            <div class="product-controls__arrows">
+                                <span class="product-controls__arrow-up">
+                                    <i class="i i-caret_up"></i>
+                                </span>
+                                <span class="product-controls__arrow-down">
+                                    <i class="i i-caret_down"></i>    
+                                </span>
+                            </div>
+                            <div class="product-controls__btn">в корзину</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="product-thumb">
+                <div class="product-thumb__body">
+                    <div class="product-thumb__img" style="background-image: url(/img/goods/prod-4.jpg);"></div>
+                    <p class="product-thumb__name">Провод СИП 4*16 мж</p>
+                    <span class="product-thumb__articul">Артикул ER-10-001</span>
+                </div>
+                <footer class="product-thumb__footer">
+                    <div class="product-thumb__avail-price">
+                        <div class="product-thumb__avail">
+                            <span>В наличии:</span>
+                            <b>больше 10</b>
+                        </div>
+                        <div class="product-thumb__price">
+                            134 &#8381;
+                        </div>
+                    </div>
+                    <div class="product-thumb__controls">
+                        <div class="product-controls">
+                            <div class="product-controls__quant">12</div>
+                            <div class="product-controls__arrows">
+                                <span class="product-controls__arrow-up">
+                                    <i class="i i-caret_up"></i>
+                                </span>
+                                <span class="product-controls__arrow-down">
+                                    <i class="i i-caret_down"></i>    
+                                </span>
+                            </div>
+                            <div class="product-controls__btn">в корзину</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="product-thumb">
+                <div class="product-thumb__body">
+                    <div class="product-thumb__img" style="background-image: url(/img/goods/prod-3.jpg);"></div>
+                    <p class="product-thumb__name">Провод СИП 4*16 мж</p>
+                    <span class="product-thumb__articul">Артикул ER-10-001</span>
+                </div>
+                <footer class="product-thumb__footer">
+                    <div class="product-thumb__avail-price">
+                        <div class="product-thumb__avail">
+                            <span>В наличии:</span>
+                            <b>больше 10</b>
+                        </div>
+                        <div class="product-thumb__price">
+                            134 &#8381;
+                        </div>
+                    </div>
+                    <div class="product-thumb__controls">
+                        <div class="product-controls">
+                            <div class="product-controls__quant">12</div>
+                            <div class="product-controls__arrows">
+                                <span class="product-controls__arrow-up">
+                                    <i class="i i-caret_up"></i>
+                                </span>
+                                <span class="product-controls__arrow-down">
+                                    <i class="i i-caret_down"></i>    
+                                </span>
+                            </div>
+                            <div class="product-controls__btn">в корзину</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="product-thumb">
+                <div class="product-thumb__body">
+                    <div class="product-thumb__img" style="background-image: url(/img/goods/prod-2.jpg);"></div>
+                    <p class="product-thumb__name">Провод СИП 4*16 мж</p>
+                    <span class="product-thumb__articul">Артикул ER-10-001</span>
+                </div>
+                <footer class="product-thumb__footer">
+                    <div class="product-thumb__avail-price">
+                        <div class="product-thumb__avail">
+                            <span>В наличии:</span>
+                            <b>больше 10</b>
+                        </div>
+                        <div class="product-thumb__price">
+                            134 &#8381;
+                        </div>
+                    </div>
+                    <div class="product-thumb__controls">
+                        <div class="product-controls">
+                            <div class="product-controls__quant">12</div>
+                            <div class="product-controls__arrows">
+                                <span class="product-controls__arrow-up">
+                                    <i class="i i-caret_up"></i>
+                                </span>
+                                <span class="product-controls__arrow-down">
+                                    <i class="i i-caret_down"></i>    
+                                </span>
+                            </div>
+                            <div class="product-controls__btn">в корзину</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="product-thumb">
+                <div class="product-thumb__body">
+                    <div class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></div>
+                    <p class="product-thumb__name">Провод СИП 4*16 мж</p>
+                    <span class="product-thumb__articul">Артикул ER-10-001</span>
+                </div>
+                <footer class="product-thumb__footer">
+                    <div class="product-thumb__avail-price">
+                        <div class="product-thumb__avail">
+                            <span>В наличии:</span>
+                            <b>больше 10</b>
+                        </div>
+                        <div class="product-thumb__price">
+                            134 &#8381;
+                        </div>
+                    </div>
+                    <div class="product-thumb__controls">
+                        <div class="product-controls">
+                            <div class="product-controls__quant">12</div>
+                            <div class="product-controls__arrows">
+                                <span class="product-controls__arrow-up">
+                                    <i class="i i-caret_up"></i>
+                                </span>
+                                <span class="product-controls__arrow-down">
+                                    <i class="i i-caret_down"></i>    
+                                </span>
+                            </div>
+                            <div class="product-controls__btn">в корзину</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--             <div class="lead">
                 <h2>Выделенный блок</h2>
                 <p>Это выделенный блок. Для важной информации</p>
                 <p>Бобры - удивительные животные. Каждый из них настоящий мастер по дереву. Бобры - удивительные животные. Каждый из них настоящий мастер по дереву. Бобры - удивительные животные. Каждый из них настоящий мастер по дереву.</p>
-            </div>
+            </div> -->
 
-            <blockquote class="ref">
+<!--             <blockquote class="ref">
                 <h6>Цитата</h6>
                 Интеллект - это способность избегать выполнения работы, но так, чтобы она при этом была сделана.
                 <cite>Linus Torwalds</cite>
-            </blockquote>
+            </blockquote> -->
+
+
+
+
+<div class="stretch stretch_gray section-padding partners mb-80">
+    <div class="container">
+        <div class="row">
             
-            <h2>Кнопки без иконок</h2>
-            <div class="row">
-                <div class="col-4">
-                    <h6>.btn_main</h6>
-                    <a href="#" class="btn btn_main btn_size-l">Большая кнопка</a>
-                    <a href="#" class="btn btn_main btn_size-m">Средняя кнопка</a>
-                    <br/><a href="#" class="btn btn_main btn_size-s">Малая кнопка</a>
-                    
-                </div>
-                <div class="col-4">
-                    <h6>.btn_outline</h6>
-                    <a href="#" class="btn btn_outline btn_size-l">Большая кнопка</a>
-                    <a href="#" class="btn btn_outline btn_size-m">Средняя кнопка</a>
-                    <br/><a href="#" class="btn btn_outline btn_size-s">Малая кнопка</a>
-                </div>
-                <div class="col-4">
-                    <h6>.btn_secondary</h6>
-                    <a href="#" class="btn btn_secondary btn_size-l">Большая кнопка</a>
-                    <a href="#" class="btn btn_secondary btn_size-m">Средняя кнопка</a>
-                    <br/><a href="#" class="btn btn_secondary btn_size-s">Малая кнопка</a>
-                </div>
-   
-            </div>
+            <div class="col-4">
+                <h2 class="text-left">Наши партнеры</h2>
 
-            <h2>Кнопки с иконками</h2>
+                <p class="text-small text-darkgray mb-40">
+                    Более 60 производителей товаров успешно сотрудничают с нами. Широкая дилерская структура и развитая сеть каналов продаж позволяет нашей компании эффективно продвигать и доставлять продукцию наших поставщиков.
+                </p>
 
-            <div class="row">
-                <div class="col-4">
-                        <h6>.btn_icon</h6>
-                        <p>.btn_icon-cart</p>
-                        <a href="#" class="btn btn_icon btn_icon-cart btn_size-l">
-                            В корзину
-                        </a>
-                        <a href="#" class="btn btn_icon btn_icon-cart btn_size-m">
-                            В корзину
-                        </a>
-                        <br/>
-                        <a href="#" class="btn btn_icon btn_icon-cart btn_size-s">
-                            В корзину
-                        </a>
-                </div>
-                <div class="col-4">
-                        <h6>.btn_icon</h6>
-                        <p>.btn_icon-call</p>
-                        <a href="#" class="btn btn_icon btn_icon-call btn_size-l">
-                            Обратный звонок
-                        </a>
-                        <a href="#" class="btn btn_icon btn_icon-call btn_size-m">
-                            Обратный звонок
-                        </a>
-                        <a href="#" class="btn btn_icon btn_icon-call btn_size-s">
-                            Обратный звонок
-                        </a>
-                </div>
-                <div class="col-4">
-                        <h6>.btn_icon</h6>
-                        <p>.btn_icon-email</p>
-                        <a href="#" class="btn btn_icon btn_icon-email btn_size-l">
-                            Подписаться
-                        </a>
-                        <a href="#" class="btn btn_icon btn_icon-email btn_size-m">
-                            Подписаться
-                        </a>
-                        <br/>
-                        <a href="#" class="btn btn_icon btn_icon-email btn_size-s">
-                            Подписаться
-                        </a>
-                </div>
-                <div class="col-4">
-                    <h6>.btn_icon</h6>
-                    <p>.btn_icon-submit</p>
-                    <a href="#" class="btn btn_icon btn_icon-submit btn_size-l">
-                        Отправить
-                    </a>
-                    <a href="#" class="btn btn_icon btn_icon-submit btn_size-m">
-                        Отправить
-                    </a>
-                    <br/>
-                    <a href="#" class="btn btn_icon btn_icon-submit btn_size-s">
-                        Отправить
-                    </a>
+                <div class="icon-text">
+                    <div class="icon-text__icon">
+                        <img src="/img/icons/i-checklist.png" alt="">
+                    </div>
+                    <div class="icon-text__text">
+                        <p class="text-small text-darkgray">Предложения о сотрудничестве принимают в отделе снабжения: по e-mail: <a href="mailto:snab@bakoplus.ru">snab@bakoplus.ru</a> и по тел.: +7 (3852) 46-11-15 </p>
+                    </div>
                 </div>
             </div>
+            <div class="col-8">
+                <div class="row cols-no-margin">
+                    <div class="col-4">
+                        <div class="partner-thumb">
+                            <div class="partner-thumb__img-holder" style="background-image: url(/img/icons/brands/brand-0.png);"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="partner-thumb">
+                            <div class="partner-thumb__img-holder" style="background-image: url(/img/icons/brands/brand-1.png);"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="partner-thumb">
+                            <div class="partner-thumb__img-holder" style="background-image: url(/img/icons/brands/brand-2.png);"></div>
+                        </div>
+                    </div>
 
+                    <div class="col-4">
+                        <div class="partner-thumb">
+                            <div class="partner-thumb__img-holder" style="background-image: url(/img/icons/brands/brand-3.png);"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="partner-thumb">
+                            <div class="partner-thumb__img-holder" style="background-image: url(/img/icons/brands/brand-4.png);"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="partner-thumb">
+                            <div class="partner-thumb__img-holder" style="background-image: url(/img/icons/brands/brand-5.png);"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="partner-thumb">
+                            <div class="partner-thumb__img-holder" style="background-image: url(/img/icons/brands/brand-6.png);"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="partner-thumb">
+                            <div class="partner-thumb__img-holder" style="background-image: url(/img/icons/brands/brand-7.png);"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <a class="partner-thumb partner-thumb__link">
+                        <span>
+                            все партнеры
+                        </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+            
+
+
+<div class="container mb-100">
+    <h2>полезная информция</h2>
+
+    <div class="row">
+        <div class="col-4">
+            <a href="#" class="news-thumb">
+                <div class="news-thumb__img" style="background-image: url(/img/bg/bg-news.jpg);"></div>
+                <div class="news-thumb__date">5 ноября 2018</div>
+                <p class="news-thumb__headline">Поступили в продажу светодиодные лампы, видеоглазки, настольные лампы от компании «НАВИГАТОР»</p>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="#" class="news-thumb">
+                <div class="news-thumb__img" style="background-image: url(/img/bg/bg-news.jpg);"></div>
+                <div class="news-thumb__date">5 ноября 2018</div>
+                <p class="news-thumb__headline">Поступили в продажу светодиодные лампы, видеоглазки, настольные лампы от компании «НАВИГАТОР»</p>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="#" class="news-thumb news-thumb_txt-only">
+                <div class="news-thumb__date">5 ноября 2018</div>
+                <p class="news-thumb__headline">Плавкий предохранитель на 16А — зашита от короткого замыкания</p>
+            </a>
+            <a href="#" class="news-thumb news-thumb_txt-only">
+                <div class="news-thumb__date">5 ноября 2018</div>
+                <p class="news-thumb__headline">Мощнtая новинка в эксклюзивном продакт-дизайне тройник ЭРА. </p>
+            </a>
+            <a href="#" class="news-thumb news-thumb_txt-only">
+                <div class="news-thumb__date">5 ноября 2018</div>
+                <p class="news-thumb__headline">Поступили в продажу электроконвекторы "Teplon Air" и инфракрасные обогреватель “Zencha”</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="" class="btn btn_main btn_size-l">Все новости</a>
+    </div>
+</div>
 
 
 
@@ -283,9 +674,11 @@
 
 
 
-
-
-
+<div class="footer">
+    <div class="container">
+        футер
+    </div>
+</div>
 
             
 

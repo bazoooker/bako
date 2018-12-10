@@ -21,104 +21,13 @@
 
 $(document).ready(function(){
 
-
-// 1. слайдеры
-// ==============
-
-    // 1.1 промо-блок
-    // -----------------
-
-        // логика:
-        // Запускается разбор слайда - элементы уезжают с экрана
-        // Вызывается смена слайда с нулевым временем перехода (мгновенно)
-        // Новый слайд собирается - элементы появляются на экране
-
-
-        // на больших экранах отключаем свайп пальцем, на малых включаем
-        if ($( window ).width() > 768) {
-            var heroSwiper = new Swiper('.swiper-hero', {
-              speed: 0,
-              touchRatio: 0,
-            });
-        } else {
-            var heroSwiper = new Swiper('.swiper-hero', {
-              speed: 400,
-            });
-        }
-
-        // разобрать слайд до свайпа
-        function breakSlide() {
-            $('.hero').addClass('up');
-            $('.swiper-slide').find('.hero__slide-number, .hero__info h1, .hero__info p, .hero__info a, .hero__img').addClass('up');
-            console.log('break slide');
-        }
-
-        // собрать слайд после свайпа
-        function makeupSlide() {
-            $('.hero').removeClass('up');
-            $('.swiper-slide').find('.hero__slide-number, .hero__info h1, .hero__info p, .hero__info a, .hero__img').removeClass('up');
-            console.log('make slide');
-        }
-
-        // свайп влево-справо
-        function slideNext() { 
-            heroSwiper.slideNext(0);
-            makeupSlide(); 
-        }
-        function slidePrev() { 
-            heroSwiper.slidePrev(0);
-            makeupSlide(); 
-        }
-
-
-        // триггеры
-        $('.js-slide-next').click(function() {
-            $(this).parent().find('.arrow_active').removeClass('arrow_active');
-            $(this).parent().find('.bullet_active').removeClass('bullet_active');
-            $(this).parent().next().find('.arrow').addClass('arrow_active');
-            $(this).parent().next().find('.bullet').addClass('bullet_active');
-            breakSlide();
-            setTimeout(slideNext, 950);
+        var swiper = new Swiper('.swiper-hero', {
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
         });
 
-        $('.js-slide-prev').click(function() {
-            $(this).parent().find('.arrow_active').removeClass('arrow_active');
-            $(this).parent().find('.bullet_active').removeClass('bullet_active');
-            $(this).parent().prev().find('.arrow').addClass('arrow_active')
-            $(this).parent().prev().find('.bullet').addClass('bullet_active');
-            breakSlide();
-            setTimeout(slidePrev, 950);
-        });
-
-        $('.js-slide-to-me').click(function(event) {
-            var me = $(this);
-            var myNum = me.attr('data-slide-to');
-
-            // если нажат текщущий слайд, ничего не происходит
-            if(me.hasClass('bullet_active')) {
-                return false;
-            } else {
-                breakSlide();
-
-                $('.bullet').removeClass('bullet_active');
-                me.addClass('bullet_active');
-
-                $('.arrow').removeClass('arrow_active');
-                me.parent().find($('.arrow')).addClass('arrow_active');
-
-                function slideToMe() {
-                    heroSwiper.slideTo(myNum, 0);
-                    makeupSlide();
-                }
-
-                setTimeout(slideToMe, 950);
-            }
-        });
-
-
-
-    // 1.2 отзывы
-    // -----------------
 
 
         var feedbackSwiper = new Swiper('.swiper-feedback', {
@@ -131,8 +40,6 @@ $(document).ready(function(){
 
 
 
-    // 1.3 обучение
-    // -----------------
 
 
         var teachingSwiper = new Swiper('.swiper-teaching', {
@@ -142,6 +49,18 @@ $(document).ready(function(){
             el: '.teaching-pagination',
           },
         });
+
+
+
+
+
+        $('.product-controls__arrow-up, .product-controls__arrow-down').on('mousedown', function() {
+            $(this).addClass('pressed');
+        });
+        $('.product-controls__arrow-up, .product-controls__arrow-down').on('mouseup', function() {
+            $(this).removeClass('pressed');
+        })
+
 
 
 
@@ -398,7 +317,7 @@ $(document).ready(function(){
 // 6. параллакс
 // ==============
 
-    $.stellar();
+    // $.stellar();
 
 
 
@@ -533,7 +452,7 @@ $(document).ready(function(){
 
 
 
-    $('.signup-form__masked-tel').mask('+7(999) 999-99-99');
+    // $('.signup-form__masked-tel').mask('+7(999) 999-99-99');
 
 
 });

@@ -1,0 +1,74 @@
+.product-controls {
+	width: 210px;
+	height: 50px;
+	@include flex-row(nowrap,space-between,center);
+	overflow: hidden;
+}
+
+.product-controls__quant  {
+	@include flex-row(nowrap,center,center);
+	width: 50px;
+	height: 100%;
+	flex: 0 0 50px;
+	border-right:1px solid #d9d9d9;
+	color: $black;
+	font-size: 16px;
+	border-top:1px solid #d9d9d9;
+	border-bottom:1px solid #d9d9d9;
+	border-left:1px solid #d9d9d9;
+}
+.product-controls__arrows  {
+	width: 37px;
+	height:100%;
+	flex: 0 0 37px;
+	@include flex-row(wrap,center,center);
+}
+.product-controls__arrow-down,
+.product-controls__arrow-up  {
+	flex: 1 1 100%;
+	height: 50%;
+	position: relative;
+	cursor: pointer;
+	transition: $tr1;
+	&:hover {
+		background-color: $gray1;
+	}	
+	i.i {
+		width: 12px;
+		height: 7px;
+		transition: 50ms;
+	}
+}
+
+.product-controls__arrow-up  {
+	border-top:1px solid #d9d9d9;
+	border-bottom:1px solid #d9d9d9;
+	&.pressed {
+		.i {transform: translateY(-5px) translateX(-50%); }
+	}
+}
+.product-controls__arrow-down  {
+	flex: 1 1 100%;
+	border-bottom:1px solid #d9d9d9;
+	&.pressed {
+		.i {transform: translateY(-2px) translateX(-50%);}
+	}
+}
+.product-controls__btn  {
+	height: 50px;
+	flex-grow: 1;
+	background-color: $yellow;
+	border: 2px solid $yellow;
+	color: $black;
+	text-transform: uppercase;
+	@include flex-row(nowrap,center,center);
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: $tr1;
+
+	&:hover {
+		background-color: #fff;
+		border: 2px solid $black;
+	}
+}

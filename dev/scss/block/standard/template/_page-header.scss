@@ -17,7 +17,9 @@
 }
 
 .page-header__bottombar {
+	height: 60px;
 	.container {
+		height: 100%;
 		@include flex-row(nowrap,space-between,center);
 	}
 }
@@ -48,35 +50,6 @@
 	flex-grow: 1;
 	@include flex-row(nowrap,space-between,center);
 }
-
-.page-header__shop-option {
-	flex: 0 1 33.3%;
-	margin-right: 10px;
-	@include flex-row(nowrap,flex-start,center);
-	span {
-		color: $gray3;
-		font-size: 14px;
-		line-height: 1.5;
-		transition: $tr2;
-	}
-	&:hover {
-		text-decoration: none;
-		span {color: $black;}
-		.icon_rounded {
-			border-color: $yellow;
-			// box-shadow: 0 0 1px 1px $yellow;
-			transform: translateY(-4px);
-		}
-	}
-}
-
-
-
-
-
-
-
-
 
 
 

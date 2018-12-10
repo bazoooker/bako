@@ -17,7 +17,7 @@ html {}
 
 body {
     @include font-kit(18px, 18px, 17px, 16px, 15px);
-    @include line-height-kit(1.15, 1.20, 1.3, 1.4, 1.55);
+    @include line-height-kit(1.45, 1.45, 1.5, 1.5, 1.55);
     font-family: 'Clear Sans', sans-serif;
     font-weight: 400;
     color: $gray3;
@@ -30,7 +30,7 @@ body {
 
 
 // HEADINGS
-h1,h2,h3,h4,h5 {
+h1,h3,h4,h5 {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 900;
     letter-spacing: -.2px;
@@ -40,14 +40,53 @@ h1,h2,h3,h4,h5 {
 h1 {
     @include font-kit(40px, 37px, 34px, 31px, 29px);
     @include line-height-kit(1.15, 1.20, 1.25, 1.3, 1.35);
-    // color: $color_font;
-    // margin: $gutter*2 0 $gutter*2 0;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 900;
 }
 h2 {
-    @include font-kit(32px, 29px, 27px, 25px, 24px);
-    @include line-height-kit(1.15, 1.20, 1.3, 1.4, 1.55);
-    color: $color_font;
-    margin: $gutter*2 0 $gutter*2 0;
+    position: relative;
+    @include font-kit(26px, 25px, 24px, 23px, 22px);
+    @include line-height-kit(1.25, 1.3, 1.35, 1.4, 1.55);
+
+    padding: 20px 0 22px 0;
+    margin: 43px 0;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 900;
+    color: $black;
+
+    &::before {
+        @include pseudo;
+        width: 60px;
+        height: 5px;
+        background-color: $yellow;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &::after {
+        @include pseudo;
+        width: 60px;
+        height: 5px;
+        background-color: $yellow;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+h2.text-left {
+    text-align: left;
+    &::before {
+        left: 0%;
+        transform: translateX(0%);
+    }
+    &::after {
+        left: 0%;
+        transform: translateX(0%);
+    }
 }
 h3 {
     @include font-kit(28px, 26px, 24px, 22px, 20px);
@@ -75,6 +114,9 @@ h6 {
     margin: $gutter*2 0 $gutter*2 0;
 }
 
+.text-darkgray {
+    color: $gray4 !important;
+}
 
 
 // CONTENT
@@ -150,7 +192,9 @@ ul {
     }
 }
 
-
+.text-small {
+    @include font-kit(16px, 16px, 15px, 15px, 14px);
+}
 
 
 

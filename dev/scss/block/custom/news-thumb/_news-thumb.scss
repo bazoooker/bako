@@ -1,0 +1,27 @@
+.news-thumb {
+	display: inline-block;
+	padding: 20px;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.news-thumb_txt-only { padding: 20px 0 20px 10px; margin-bottom: 10px; }
+
+.news-thumb__img {
+	height: 220px;
+	margin: 0 -10px 30px -10px;
+	@include bg-cover;
+}
+.news-thumb__date {
+	display: block;
+	margin: 0 0 8px 0;
+	color: $gray3;
+	font-size: 14px;
+}
+.news-thumb__headline {
+	color: $black;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 16px;
+}
