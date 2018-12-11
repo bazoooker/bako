@@ -32,10 +32,14 @@
 	// background-color: $color_main;
 	background-color: $yellow;
 	color: $black;
-	border: 1px solid transparent;
+	border: 2px solid $yellow;
+	transition: all $tr2;
 	&:active,
 	&:visited 	{ color: $black; }
-	&:hover 	{ background-color: darken($color_main, 8%) }
+	&:hover 	{ 
+		background-color: #fff;
+		border: 2px solid $black; 
+	}
 	&:focus 	{}
 }
 
@@ -49,25 +53,25 @@
 	&:focus 	{}
 }
 
-.btn_outline {
-	background-color: #fff;
-	color: $color_main;
-	border: 1px solid $color_main;
-	&:active,
-	&:visited 	{ color: $color_main; }
-	&:hover 	{ background-color: $color_main; color: #fff; }
-	&:focus 	{}
-}
+// .btn_outline {
+// 	background-color: #fff;
+// 	color: $color_main;
+// 	border: 1px solid $color_main;
+// 	&:active,
+// 	&:visited 	{ color: $color_main; }
+// 	&:hover 	{ background-color: $color_main; color: #fff; }
+// 	&:focus 	{}
+// }
 
-.btn_add-to-cart {
-	background-color: #fff;
-	color: $color_main;
-	border: 1px solid $color_main;
-	&:active,
-	&:visited 	{ color: $color_main; }
-	&:hover 	{ background-color: $color_main; color: #fff; }
-	&:focus 	{}
-}
+// .btn_add-to-cart {
+// 	background-color: #fff;
+// 	color: $color_main;
+// 	border: 1px solid $color_main;
+// 	&:active,
+// 	&:visited 	{ color: $color_main; }
+// 	&:hover 	{ background-color: $color_main; color: #fff; }
+// 	&:focus 	{}
+// }
 
 .btn_icon {
 	position: relative;

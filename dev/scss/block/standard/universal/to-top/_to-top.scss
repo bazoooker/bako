@@ -2,18 +2,16 @@
 	@include flex-row(nowrap, center, center);
 	position: fixed;
 
-	transform: translateX(-200%);
+	transform: translateX(220%);
 
-	left: 0;
-	bottom: 0;
+	right: 30px;
+	bottom: 30px;
 
-	padding-right: 2rem;
+	padding-right: 2px;
 
-	// width: 10rem;
-	width: 3.3rem;
-	// height: 4rem;
-	height: 100%;
-	background-color: rgba(0,0,0,.1);
+	width: 50px;
+	height: 50px;
+	background-color: rgba(0,0,0,.3);
 	
 	cursor: pointer;
 
@@ -24,12 +22,12 @@
 
 	&:before {
 		@include pseudo;
-		right: 1.3rem;
+		right: 20px;
 		top: 50%;
 		transform: translateY(-20%) rotate(-135deg);
 
-		width: 1rem;
-		height: 1rem;
+		width: 10px;
+		height: 10px;
 
 		border-bottom: 2px solid #fff;
 		border-right: 2px solid #fff;
@@ -38,9 +36,7 @@
 
 	&:hover {
 		opacity: 1;
-		height: 100%;
 		background-color: rgba(0,0,0,.6);
-		width: 10rem;
 
 		.to-top__text {
 			opacity: 1;

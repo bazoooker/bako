@@ -5,11 +5,12 @@
 // 	с дропдауном
 
 .nav {
+	font-size: 0;
 	a {
 		position: relative;
 		display: inline-block;
-		padding: 15px 0;
-		margin: 0 50px 0 0;
+		padding: 15px 25px;
+		margin: 0 0 0 0;
 		font-size: 14px;
 		color: $gray4;
 		transition: $tr3;
@@ -19,21 +20,22 @@
 		
 		// ВЕРНУТЬ!
 		
-			// &:hover {
-			// 	text-decoration: none;
-			// 	&::before {width: 100%;}
-			// }
+			&:hover {
+				text-decoration: none;
+				color: black;
+				background-color: $gray2;
+				// &::before {width: 100%;}
+			}
 
-		&::before {
-			@include pseudo;
-			left: 0;
-			bottom: 0;
-			height: 3px;
-			width: 0%;
-			background-color: $yellow;
+		// &::before {
+		// 	@include pseudo;
+		// 	left: 0;
+		// 	bottom: 0;
+		// 	height: 3px;
+		// 	width: 0%;
+		// 	background-color: $black;
 			
-			transition: $tr3;
-
-		}
+		// 	transition: $tr2;
+		// }
 	}
 }

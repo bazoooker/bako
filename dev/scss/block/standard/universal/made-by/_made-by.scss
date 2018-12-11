@@ -2,12 +2,59 @@
 // block
 .made-by {
     color: #fff;
-    font-size: 1.2rem;
-    opacity: .6;
-    margin: 0 0 0 0;
+
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+    transition: 400ms;
+    &:after,
+    &:before {opacity: 0;}
+
+    &:before {
+        @include pseudo;
+        top: 8px;
+        right: -24px;
+        transform: translateX(150%);
+
+        width: 12px;
+        height: 4px;
+        background-color: $yellow;
+        transition: 300ms;
+    }
+
+    &:after {
+        @include pseudo;
+        top: -8px;
+        right: -16px;
+        transform: translateX(-50%);
+
+        width: 4px;
+        height: 12px;
+        background-color: $yellow;
+        transition: 300ms;
+    }
+    &:visited {
+        color: #fff;
+    }
+    &:hover {
+        color: $yellow;
+        text-decoration: none;
+        
+        &:before {
+            transform: translateX(-50%);
+        }
+        &:after {
+            top: 4px;
+        }
+
+        &:after,
+        &:before {opacity: 1;}
+    }
 }
 
 // elements
+
+
 .made-by__link {
     position: relative;
     color: #fff;
@@ -20,34 +67,9 @@
     font-weight: 600;
     text-decoration: none;
 
-    &:after {
-        @include pseudo;
-        top: -10px;
-        opacity: 0;
-        left: 50%;
-        transform: translateX(-50%);
-
-        width: 4rem;
-        height: 1.4rem;
-
-        background-image: url(/img/logo_roof.png);
-        background-size: 3.5rem;
-        background-repeat: no-repeat;
-        background-position: 50% 25%;
-
-        transition: 300ms;
-    }
-    &:visited {
-        color: #fff;
-    }
-    &:hover {
-        background-position: 50% 0%;
-        color: $color_main;
-        &:after {
-            top: 0;
-            opacity: 1;
-        }
-    }
 }
 
-// modificators
+.yellow {
+    color: $yellow;
+}
+

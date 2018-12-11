@@ -9,6 +9,7 @@
 }
 
 .col-10,
+.col-9,
 .col-8,
 .col-6,
 .col-4,
@@ -42,6 +43,10 @@
 .col-10 {
 	flex: 1 1 $col-width * 10;
 	max-width: $col-width * 10;
+}
+.col-9 {
+	flex: 1 1 $col-width * 9;
+	max-width: $col-width * 9;
 }
 .col-8 {
 	flex: 1 1 $col-width * 8;

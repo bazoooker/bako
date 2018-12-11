@@ -1,3 +1,8 @@
 .product-list {
-	@include flex-row(wrap, space-between, stretch);
+	display: none;
+
+	a {
+		padding: 12px 0;
+		color: $black;
+	}
 }

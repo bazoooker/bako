@@ -13,23 +13,8 @@
 	background-image: url(/img/logo.png); 
 	@include bg-contain;
 
-	&.logo_filled {
+	&.logo_white {
 		position: relative;
-		background-image: url(/img/logo-filled_noroof.png); 
-
-		&:after {
-			@include pseudo;
-			width: 7.3rem;
-			height: 7.3rem;
-			left: -.2rem;
-    		top: -2.2rem;
-			border-radius: 50%;
-			background-image: url(/img/logo-filled_roof.png); 
-			@include bg-contain;
-		}
-
-			&:hover:after {
-				transform: translateY(-3px);
-			}
+		background-image: url(/img/logo_white.png); 
 	}
 }
