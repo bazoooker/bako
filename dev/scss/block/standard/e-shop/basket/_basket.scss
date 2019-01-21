@@ -1,67 +1,148 @@
 .basket {
-	position: relative;
+	position: fixed;
 	height: 100%;
+	width: 600px;
+	
+	background-color: #fff;
+	z-index: 21;
+
+	transition: transform $tr2;
+
+
+	// изменяется
+	padding: 40px 40px;
+	overflow: hidden;
+
+	top: 0;
+	right: 0;
+	left: auto;
+	transform: translateX(101%);
+
+	h3 {
+		position: relative;
+		margin: 0 20px 0 0;
+		padding: 0 40px 23px 53px;
+		border-bottom: 1px solid $gray2;
+
+		// padding: 0 40px 38px 0;
+
+		.i {
+			left: 13px;
+			top: 17px;
+		}
+		.i-cart__num {
+			color: black;
+			background-color: $yellow;
+		}
+	}
+
+
+	&.active {
+		overflow-y: scroll;
+		transform: translateX(0);
+	}
+}
+
+
+.basket__btn-close {
+	position: absolute;
+	top: 33px;
+	right: 50px;
+
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
 	cursor: pointer;
 
-	@include flex-row(nowrap, space-between, center);
+	transform: rotate(45deg);
+	
+	transform-origin: 50% 50%;
+	transition: 300ms;
+	
+	&:after {
+		@include pseudo;
 
-	padding: 0 0 0 6rem;
+		top: 19px;
+		left: 19px;
+		transform: translateX(-9px);
 
-	text-decoration: none;
+		width: 20px;
+		height: 2px;
+
+		background: $black;
+	}
+
+	&:before {
+		@include pseudo;
+
+		top: 19px;
+		left: 19px;
+		transform: translateY(-9px);
+
+		width: 2px;
+		height: 20px;
+
+		background: $black;
+	}
+
+	&:active {
+		border: 0;
+		outline: 0;
+	}
 
 	&:hover {
-		.basket__price {
-			color: $color_main-r;
-		}
-
-		&:before {
-			transform: translateY(-50%) rotate(60deg);
-			
-		}
+		transform: rotate(135deg);
 	}
 
-	&::before {
-		@include pseudo;
-
-		left: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		height: 4.7rem;
-		width: 5.3rem;
-		background-image: url(/img/icons/i-octagon.png);
-		@include bg-contain;
-
-		transition: $tr;
-	}
-
-	&::after {
-		@include pseudo;
-
-		left: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		height: 4.7rem;
-		width: 4.9rem;
-		background-image: url(/img/icons/i-cart.png);
-		background-size: 2.2rem;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-
-		transition: $tr;
-	}
 }
-.basket__contents {
-	display: block;
-	flex: 1 1 100%;
-	// color: #8f8f8f;
-	font-size: 1.4rem;
-	line-height: 120%;
+
+.basket__footer{
+	// поведение
+	@include flex-row(nowrap,space-between,center);
+	margin: 0 -40px;
+	padding: 40px 125px 40px 40px;
+
+	// стили
+	background-color: $gray3;
 }
-.basket__price {
+.basket__total {
+	flex: 1 1 50%;
+	min-width: 50%;
+}
+
+.basket__total{
+	// поведение
+	padding: 0 0 0 20px;
+
+	// стили
+	text-align: right;
+}
+
+.basket__note,
+.basket__sum{
 	display: block;
-	flex: 1 1 100%;
-	font-size: 1.8rem;
-	font-weight: 600;
-	line-height: 120%;
-	transition: $tr;
+}
+
+	.basket__note{
+		color: $gray2;
+		font-size: 14px;
+
+	}
+	.basket__sum{
+		font-size: 28px;
+		color: #fff;
+		font-weight: 600;
+	}
+
+
+@media screen and (max-width: 768px) {
+	.basket {
+		width: 100%;
+	}
+	.basket__btn-close {
+		top: 20px;
+		right: 20px;
+	}
 }

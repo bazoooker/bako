@@ -7,7 +7,7 @@
 	display: inline-block;
 	position: relative;	
 	overflow: hidden;
-	text-decoration: none;
+	text-decoration: none !important;
 	font-weight: 600;
 	cursor: pointer;
 	line-height: 100%;
@@ -43,15 +43,26 @@
 	&:focus 	{}
 }
 
+
+// styles
 .btn_secondary {
-	background-color: lightgray;
-	color: $color_font;
-	border: 1px solid transparent;
+	background-color: #ededed;
+	color: #006eb3 !important;
+	transition: all $tr2;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: none;
+		border: 2px solid #ededed; 
 	&:active,
-	&:visited 	{ color: $color_font; }
-	&:hover 	{ background-color: transparent; border:1px solid #b1b1b1; }
+	&:visited 	{ color: #006eb3; }
+	&:hover 	{ 
+		background-color: #fff;
+		border-color: $gray2;
+	}
 	&:focus 	{}
 }
+
+
 
 // .btn_outline {
 // 	background-color: #fff;
@@ -238,29 +249,44 @@
     
 	// ВЕРНУТЬ
 
-    // &:hover {
-    // 	color: #fff;
-    // 	&::before {
-    // 		color: #fff;
-    // 		animation: arrowBounceDown $tr2 ease;
-    // 	}
-    // 	.i-burger__bar {background-color: #fff;}
-    // }
+    &:hover {
+    	color: #fff;
+    	background-color: #666666;
+    	&::before {
+    		color: #fff;
+    		animation: arrowBounceDown $tr2 ease;
+    	}
+    	.i-burger__bar {background-color: #fff;}
+    }
 }
 
 .btn-basket {
 	position: relative;
 	@include flex-row(nowrap,flex-start,center);
-	padding: 0 15px 0 42px;
+	padding: 0 20px 0 60px;
 	height: 100%;
 	flex-grow:0;
 	min-width: 178px;
 	cursor: pointer;
+	transition: $tr2;
+
+	// &::before {
+	// 	@include pseudo;
+	// 	left: 0;
+	// 	bottom: -4px;
+	// 	background-color: $black;		
+	// 	width: 100%;
+	// 	height: 4px;
+	// }
 
 	.i-cart {
-		left: 0;
+		left: 20px;
 		top: 50%;
 		transform: translateY(-50%);
+	}
+
+	&:hover {
+		background-color: #ffee99;
 	}
 }
 .btn-basket__text {
@@ -293,51 +319,48 @@
 // burger button
 
 
-// .btn-burger {
-// 	@include flex-col(nowrap, center, center);
-// 	width: 50px;
-// 	height: 44px;
-// 	margin: 0 0 0 0;
-// 	cursor: pointer;
-//     transition: 200ms;
+.btn-burger {
+	@include flex-row(wrap, center, center);
+	width: 60px;
+	flex: 0 0 60px;
+	max-width: 60px; /*IE*/
+	height: 100%;
+	margin: 0 0 0 0;
+	cursor: pointer;
+    transition: 200ms;
+    padding: 16px 16px;
 
-//     // change
-// 	background-color: black;
-// }
-// .btn-burger__bar {
-// 	position: relative;
-// 	width: 20px;
-//     height: 2px;
-//     margin-bottom: 5px;
-//     background-color: #fff;
-//     background-color: rgba(255,255,255,.6);
-//     transition: $tr;
-//     transform-origin: center, center;
+    // change
+	background-color: transparent;
+}
+.btn-burger__bar {
+	width: 100%;
+    height: 2px;
+    margin-bottom: 0px;
+	background-color: $black;
+    transition: $tr;
 
-//     	&:last-child { margin-bottom: 0; }
+    // 	&:last-child { margin-bottom: 0; }
 
-//     	&:nth-child(1):after {
-//     		transition-delay: 100ms;
-//     	}
-//     	&:nth-child(2):after {
-//     		transition-delay: 200ms;
-//     	}
-//     	&:nth-child(3):after {
-//     		transition-delay: 300ms;
-//     	}
+    // 	&:nth-child(1):after {
+    // 		transition-delay: 100ms;
+    // 	}
+    // 	&:nth-child(2):after {
+    // 		transition-delay: 200ms;
+    // 	}
+    // 	&:nth-child(3):after {
+    // 		transition-delay: 300ms;
+    // 	}
 
-//     &:after {
-//     	@include pseudo;
-//     	top: 0;
-//     	left: 0;
-//     	width: 0%;
-//     	height: 100%;
-//     	background-color: #fff;
-//     	z-index: 4;
+    // &:after {
+    // 	@include pseudo;
+    // 	width: 0%;
+    // 	height: 100%;
+    // 	z-index: 4;
 
-//     	transition: $tr;
-//     }
-// }
+    // 	transition: $tr;
+    // }
+}
 
 
 
@@ -509,7 +532,32 @@ input.btn {
 @keyframes arrowBounceDown {
 	0% {}
 	50% {
-		transform: translateY(-40%) rotate(45deg);
+		transform: translateY(-20%) rotate(45deg);
 	}
 	100% {}
 }
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+	.btn-catalog {
+		font-size: 14px;
+		padding: 0 18px 0 65px;
+		min-width: 213px;
+		&::before {display: none;}
+		.i-burger {
+			left: 20px;
+		}
+	}
+}
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 992px) {
+	.page-header__bottombar {
+		.btn-basket__text {display: none;}
+	}
+}
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 568px) {}
+@media screen and (max-width: 413px) {}

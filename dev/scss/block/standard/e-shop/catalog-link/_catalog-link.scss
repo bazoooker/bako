@@ -3,6 +3,9 @@
 
 
 .catalog-link__accordeon {
+	padding: 15px 36px;
+
+	// изменяется
 	display: none;
 	a {
 		display: block;
@@ -20,12 +23,32 @@
 	font-family: 'Exo 2', sans-serif;
 	text-transform: uppercase;
 	@include font-kit(18px,18px,17px,16px,15px);
-	padding: 26px 55px 26px 26px;
+	padding: 26px 60px 26px 26px;
 	border-bottom: 1px solid $gray2;
 	cursor: pointer;
+
+
+	&::before {
+		@include pseudo;
+		right: 45px;
+		top: 50%;
+		transform: translateX(-10px) translateY(-50%) rotate(-45deg);
+
+		width: 14px;
+		height: 14px;
+		border-bottom: 1px solid $gray3;
+		border-right: 1px solid $gray3;
+
+		transition: $tr1;
+		
+		// изменяется
+		opacity: 0;
+	}
+
 	&:hover {
 		background-color: rgba(0,0,0,.075);
 	}
+
 	i {
 		display: inline-block;
 		margin: 0 0 0 17px;
@@ -34,6 +57,7 @@
 		color: $gray3;
 		font-family: 'Clear Sans', sans-serif;
 	}
+
 	&.active {
 		position: relative;
 		background-color: rgba(0,0,0,.075);
@@ -43,16 +67,10 @@
 		}
 
 		&::before {
-			@include pseudo;
-			right: 50px;
-			top: 50%;
-			transform: translateY(-50%) rotate(-45deg);
-
-			width: 14px;
-			height: 14px;
-			border-bottom: 1px solid $gray3;
-			border-right: 1px solid $gray3;
-
+			
+			// изменяется
+			opacity: 1;
+			transform: translateX(0) translateY(-50%) rotate(-45deg);
 		}
 }
 

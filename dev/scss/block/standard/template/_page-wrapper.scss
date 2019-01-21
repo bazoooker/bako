@@ -2,5 +2,12 @@
 	display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
+    height: auto;
     overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+	.page-wrapper {
+		padding-top: 60px;
+	}
 }

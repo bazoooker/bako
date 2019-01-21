@@ -2,16 +2,27 @@
 	height: 140px;
 	@include flex-row(nowrap,center,center);
 	border: 1px solid $gray2;
+	transition: $tr2;
+	transition-delay: 30ms;
 
 	&:first-child {
 		margin-right:-1px;
+		margin-top:-1px;
 	}
+
+	&.blurred {
+		// background-color: $black;
+		opacity: .4;
+	}
+	&.blurred.active {background-color: $yellow; opacity: 1;}
 }
 
 .partner-thumb__img-holder {
 	height: 60%;
 	width: 60%;
 	@include bg-contain;
+	filter: grayscale(1);
+	transition: $tr1;
 }
 
 .partner-thumb__link {
@@ -42,13 +53,30 @@
 		}
 	}
 
+	&:visited,&:active {
+		text-decoration: none;
+		color: $black;
+	}
+
 	&:hover {
 		text-decoration: none;
+		cursor: pointer;
 
 		span {
 			&::before {
 				transform: translateY(-35%) translateX(4px) rotate(-45deg) ;
 			}
 		}
+	}
+}
+
+
+@media screen and (max-width: 370px) {
+	.partner-thumb {
+		height: 100px;
+	}
+	.partner-thumb__img-holder {
+		width: 40%;
+		height: 40%;
 	}
 }

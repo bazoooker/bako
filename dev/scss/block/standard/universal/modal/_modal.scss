@@ -1,205 +1,212 @@
 .modal {
-  background: #FFF;
-  border: 0;
+  background: #fff;
   z-index: 999;
   position: fixed;
-  display: none;
   top: 100px;
   left: 50%;
-  border-radius: .4rem; }
+  transform: translateX(-50%) translateY(-250%);
+  width: 540px;
+  height: auto;
+  padding: 40px 40px;
 
-.modal .modal-content {
-  padding: 20px; }
-  .modal .modal-content h2 {
-    color: #000; 
-    text-align: left;
-    margin: 0 15px 15px 15px;}
-  .modal .modal-content input[type="text"],
-  .modal .modal-content textarea {
-    font-family: 'DIN-Pro', sans-serif;
-    font-weight: normal;
-    background-color: #eaeaea;
-    font-size: 16px; 
-    border: 1px solid transparent;
-    transition: all 300ms;}
-  .modal .modal-content input[type="text"]:hover,
-  .modal .modal-content textarea:hover {
-    border: 1px solid lightgray;
-    background-color: transparent; }
-  .modal .modal-content input[type="text"]:focus,
-  .modal .modal-content textarea:focus {
-    outline: none;
-    background-color: #fff;
-    // border-left: 5px solid $color_main; 
+  h2 {margin: 0 0 40px 0; padding: 0;}
+
+  // transform: translateY(-101%);
+
+  transition: all 1000ms;
+
+  box-shadow: 0 0 35px 1px rgba(0,0,0,.2);
+
+
+  .container {
+    @include flex-row(nowrap,center,center);
+    position: relative;
+    height: 100%;
   }
 
-.modal .modal-close {
+
+
+  &.modal_active {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.modal__wrapper {
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.modal__note {
+  display: block;
+  padding: 20px;
+  background: #efefef;
+}
+
+
+
+  .modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    transform: rotate(45deg);
+
+    transition: 300ms;
+    
+    &:after {
+      @include pseudo;
+
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 35px;
+      height: 1px;
+
+      background: $gray3;
+    }
+
+    &:before {
+      @include pseudo;
+
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%);
+
+      width: 1px;
+      height: 35px;
+
+      background: $gray3;
+    }
+
+    &:active {
+      border: 0;
+      outline: 0;
+    }
+
+    &:hover {
+      transform: rotate(135deg) scale(1.3);
+    }
+  }
+
+
+.modal__message_error,
+.modal__message_success {
+  position: absolute; 
+  right: 0;
+  bottom: 0;
+
+  padding: 40px;
+  background-color: $yellow;
+  color: #fff;
+
+  // display: none;  
+}
+
+
+
+.modal__message_success {
+  width: 600px;
   position: absolute;
-  right: -12px;
-  top: -12px;
-  text-decoration: none;
-  width: 24px;
-  height: 24px;
-  background: #fff url("/img/icons/icon-close-mobile-menu.png") no-repeat scroll center center;
-  border-radius: 50%;
-  border: 8px solid #fff;
-  box-shadow: 0 1px 15px rgba(0,0,0,.2); 
-  transition: all 300ms;
-  &:hover {
-    box-shadow: 0 1px 25px rgba(0,0,0,.5);
-    transform: translateY(-2px) rotate(90deg); 
+  right: 50%;
+  bottom: 25px;
+  padding: 20px 20px 20px 50px;
+  background-color: #00b5bd;
+  color: #fff;
+  text-align: center;
+  transform: translateX(50%);
+
+  &::before {
+    position: absolute; 
+    content: '';
+    top: 50%;
+    left: 40px;
+    transform: translateY(-20px) rotate(45deg);
+    width: 15px;  
+    height: 30px; 
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+}
+
+.modal__message_error {
+    width: 600px;
+    position: absolute;
+    right: 50%;
+    bottom: 25px;
+    padding: 20px 20px 20px 20px;
+    background-color: #f37a7a;
+    color: #fff;
+    text-align: center;
+    transform: translateX(50%);
+}
+
+
+.form-message-error,
+.form-message-success {
+    width: 600px;
+    position: fixed;
+    right: 50%;
+    bottom: 25px;
+    padding: 20px 20px 20px 20px;
+    background-color: #00b5bd;
+    color: #fff;
+    text-align: center;
+    transform: translateX(50%);
+
+    display: none;  
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    top: 20px;
+    width: 92%;
+    overflow-y:scroll;
+    height:96%;
+  }
+
+  .modal__message_success,
+  .modal__message_error {
+    width: 450px;
+    padding:15px;
+    &::before {display: none;}
+  }
+  
+
+  .modal__close {
+        top: 25px;
+        right: 25px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .modal {
+    padding: 75px 5px;
+  }
+
+  .modal__note {
+    margin: 0 -25px;
+    padding: 20px 25px 30px 25px;
+  }
+
+  .modal__message_success,
+  .modal__message_error {
+    width: 95%;
   }
 }
 
 
-.modal label {
-  margin-bottom: 5px; }
-
-.modal form input, .modal form textarea, .modal form label.upload {
-  display: block;
-  margin-bottom: 10px;
-  width: 100%;
-  border: 1px solid #d9d9d9;
-  margin-top: 3px;
-  max-width: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 8px 10px;
-  font-family: 'DIN-Pro', sans-serif; }
-
-.modal .spinner {
-  display: none;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  z-index: 99;
-  background: url("/img/spinner.gif") no-repeat scroll center center rgba(0, 0, 0, 0.3); }
-
-.modal .button {
-  padding: 10px;
-  margin: 0 auto;
-  border: 0px;
-  cursor: pointer; }
-
-.modal .button:hover {
-  background: darkred; }
-
-.modal, #callback-window {
-  width: 600px;
-  margin-left: -300px;
-  background-color: #fff; }
-
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 990; }
-
-.modal .caption {
-  margin-bottom: 20px;
-  padding-top: 0px !important; }
-
-.modal-errors {
-  margin-top: 20px;
-  display: none;
-  background: #cc2516;
-  color: white;
-  font-weight: bold;
-  padding: 10px; }
-
-.modal-result {
-  margin-top: 20px;
-  display: none;
-  background: #f0f0f0;
-  color: #505050;
-  font-weight: bold;
-  padding: 10px; }
-
-.modal, #callback-window {
-  /*width: auto; */
-  width: 450px;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  margin-left: 0; }
-  @media screen and (max-width: 480px) {
-    .modal, #callback-window {
-      width: 300px; } }
-
-.modal .modal-controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  -webkit-align-items: stretch;
-  align-items: stretch;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap; }
-  .modal .modal-controls button {
-    // background-image: url(/img/bg/btn-bg.png);
-    outline: none;
-    border: none;
-    cursor: pointer; }
-
-/*elements*/
-/*кнопка в модальном окне*/
-.modal-controls__btn {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  padding: 10px;
-  margin: 2px;
-  text-decoration: none;
-  border: none;
-  font-family: 'MyriadPro SemiBold Italic', sans-serif;
-  font-weight: normal !important;
-  font-style: normal !important;
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 600;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  text-align: center;
-  cursor: pointer; }
-
-/*modificators*/
-/*кнока перейти к заказу*/
-.modal-controls__btn_order {
-  color: #fff;
-  background: #b8d900;
-  background: -webkit-gradient(left top, right top, color-stop(0%, #b8d900), color-stop(100%, #4ab033));
-  background: -webkit-linear-gradient(left, #b8d900 0%, #4ab033 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#b8d900), to(#4ab033));
-  background: -o-linear-gradient(left, #b8d900 0%, #4ab033 100%);
-  background: linear-gradient(to right, #b8d900 0%, #4ab033 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8d900', endColorstr='#4ab033', GradientType=1 ); }
-
-/*кнопка продолжить покупки	*/
-.modal-controls__btn_continue {
-  background-color: transparent;
-  border: 1px solid #4ab033;
-  color: #4ab033; }
-
-/*states*/
-/*эффекты блока/элементов*/
-.modal-controls__btn_order:hover {
-  background: #4ab033; }
-
-.modal-controls__btn_continue:hover {
-  background: #4ab033;
-  color: #fff; }
-
-.modal-controls__btn:focus {
-  outline: none; }
+@media screen and (max-width: 413px) {
+  .modal {
+    width: 96%; 
+  }
+}

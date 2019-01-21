@@ -37,7 +37,28 @@
 
 
 
+.bg-texture {
+    background-image: url(/img/bg/bg-texture.png);
+    background-repeat: repeat;
+}
 
+.texture-perehod-top {
+    position: relative;
+    &::before {
+        @include pseudo;
+        left: 0;
+        bottom: -190px;
+        height: 250px;
+        width: 100%;
+
+        background-image: -ms-linear-gradient(top, #FFFFFF 0%, transparent 100%);
+        background-image: -moz-linear-gradient(top, #FFFFFF 0%, transparent 100%);
+        background-image: -o-linear-gradient(top, #FFFFFF 0%, transparent 100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(100, transparent));
+        background-image: -webkit-linear-gradient(top, #FFFFFF 0%, transparent 100%);
+        background-image: linear-gradient(to bottom, #FFFFFF 0%, transparent 100%);
+    }
+}
 
 // text
 .text-center {

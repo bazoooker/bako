@@ -13,8 +13,6 @@
 
 // DOCUMENT
 
-html {}
-
 body {
     @include font-kit(18px, 18px, 17px, 16px, 15px);
     @include line-height-kit(1.45, 1.45, 1.5, 1.5, 1.55);
@@ -51,7 +49,6 @@ h2 {
     padding: 20px 0 22px 0;
     margin: 43px 0;
 
-    text-align: center;
     text-transform: uppercase;
     font-family: 'Exo 2', sans-serif;
     font-weight: 900;
@@ -64,7 +61,10 @@ h2 {
         background-color: $yellow;
         top: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(-20px);
+        transition: 1200ms;
+        transition-delay: 200ms;
+        opacity: 0;
     }
     &::after {
         @include pseudo;
@@ -73,7 +73,19 @@ h2 {
         background-color: $yellow;
         bottom: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(20px);
+        transition: 1200ms;
+        transition-delay: 200ms;
+        opacity: 0;
+    }
+
+    &.lines-added {
+        &::before,
+        &::after {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+
+        }
     }
 }
 
@@ -132,14 +144,14 @@ p {
 // LINKS
 
 a {
-    color: #007bff;
+    color: #006eb3;
     text-decoration: none;
     cursor: pointer;
 
-    &:visited { color: #007bff; }
+    &:visited { color: #2067ec; }
 
     &:focus,
-    &:active { color: #007bff; }
+    &:active { color: #0192cc; }
 
     &:hover { text-decoration: underline; }
 }
@@ -150,30 +162,45 @@ a {
 
 table {
     width: 100%;
+    margin: 40px 0;
+
+    thead {
+        font-weight: bold;
+        color: black !important;
+        text-transform: uppercase;
+        td {background-color: $gray2 !important;}
+    }
+}
+
+p+table,
+ol+table,
+ul+table,
+ol+table {
+    margin: 30px 0 40px 0;
 }
 
 table tr {
-    @include font-kit(16px, 16px, 15px, 15px, 14px);
+    @include font-kit(18px, 17px, 16px, 15px, 14px);
     @include line-height-kit(1.15, 1.20, 1.3, 1.4, 1.55);
     position: relative;
-    ovarflow: hidden;
+    transition: $tr1;
+        &:hover {
+            td {
+                background-color: $gray2 !important;
+            }
+        }
     td {
-        padding: .1rem 0rem;
-        border-bottom: 1px solid #e9e9e9;
+        padding: 10px 15px;
+        transition: $tr1;
     }
-    &:nth-child(odd) {
+    &:nth-child(even) {
         td {
             background-color: #efefef;
         }
     }
-    &:nth-child(even) {
+    &:nth-child(odd) {
         td {
             background-color: transparent;
-        }
-    }
-    tr:hover {
-        td {
-            background-color: gray;
         }
     }
 }
@@ -183,14 +210,104 @@ table tr {
 // LISTS
 
 ul {
-    padding-left: 1.3rem;
-    margin-left: 0;
+    padding-left: 2px;
+    margin: 40px 0 40px 0;
     li {
         position: relative;
-        margin-bottom: 1rem;
-        padding-left: 1rem;
+        margin-bottom: 10px;
+        padding: 0 0 0 40px;
+        list-style: none;
+
+        &::before {
+            // поведение
+            @include pseudo;
+            left: 3px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+
+            // стили
+            background-color: $yellow;
+            border-radius: 50%;
+
+        }
+
+
+        ul {
+            margin: 18px 0 18px 0;
+            li {
+                // поведение
+                padding: 0 0 0 30px;
+                &::before {
+                    // поведение
+                    width: 8px;
+                    height: 8px;
+
+                    // стили
+                    background-color: $gray2;
+                }
+            }
+        }
     }
 }
+
+
+ol{
+    padding-left: 0;
+    margin-left: 0px;
+    counter-reset: myCounter;
+    li{
+        position: relative;
+        margin-bottom: 10px;
+        padding: 0px 0 0 3px;
+        list-style: none;
+
+        &:before {
+          counter-increment: myCounter;
+          content:counter(myCounter);
+
+            // поведение
+          display: inline-block;
+          margin: 5px 10px;
+          width: 26px;
+          height: 26px;
+
+          // стили
+          background-color: $gray1;
+          color: $black;
+          text-align: center;
+          line-height: 24px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+    }
+
+    ol{
+        margin: 10px 0 10px 30px;
+        counter-reset: myCounter;
+        li{
+            &:before {
+              counter-increment: myCounter;
+              content:counter(myCounter);
+
+                // поведение
+              display: inline-block;
+              margin: 5px 10px;
+              width: 22px;
+              height: 22px;
+
+              // стили
+              background-color: transparent;
+              color: $gray3;
+              text-align: center;
+              line-height: 22px;
+              font-size: 16px;
+              font-weight: 600;
+            }
+        }
+    }
+}
+
 
 .text-small {
     @include font-kit(16px, 16px, 15px, 15px, 14px);

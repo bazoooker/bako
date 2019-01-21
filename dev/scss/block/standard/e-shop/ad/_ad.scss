@@ -1,0 +1,26 @@
+.ad {
+	// поведение
+	display: block;
+	margin: 40px 0;
+	width: 100%;
+	height: 300px;
+
+	// стили
+	overflow: hidden;
+
+	&:hover {
+		.ad__inner {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.ad__inner {
+	// поведение
+	width: 100%;
+	height: 100%;
+
+	// стили
+	@include bg-cover;
+	transition: $tr2;
+}

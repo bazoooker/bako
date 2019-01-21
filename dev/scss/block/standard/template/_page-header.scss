@@ -12,12 +12,14 @@
 	.container {
 		position: relative;
 		@include flex-row(nowrap, space-between,center);
+		max-height: 133px;
 	}
 	padding: 35px 0;
 }
 
 .page-header__bottombar {
 	height: 60px;
+	z-index: 3;
 	.container {
 		height: 100%;
 		@include flex-row(nowrap,space-between,center);
@@ -44,6 +46,10 @@
 		font-size: 14px;
 		color: $gray3;
 	}
+
+	&:hover {
+		
+	}
 }
 
 .page-header__shop-controls {
@@ -56,23 +62,31 @@
 // modificators
 
 
-// responsiveness
-// @media screen and (max-width: 1200px) {
-
-// }
-
-// @media screen and (max-width: 1024px) {
-
-// }
-
-// @media screen and (max-width: 992px) {
-
-// }
-
-// @media screen and (max-width: 768px) {
-
-// }
-
-// @media screen and (max-width: 568px) {
-
-// }
+@media screen and (max-width: 1200px) {
+	.page-header__middlebar {
+		.logo {
+			margin: 0 65px 0 0;
+		}
+	}
+}
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 992px) {
+	.page-header__middlebar {
+		.container {
+			@include flex-row(wrap,space-around,center);
+		}
+	}
+	.page-header__shop-controls {
+		flex: 1 1 100%;
+	}
+	.page-header__middlebar {
+		.container {
+			max-height: 133px;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.page-header {display: none;}
+}
+@media screen and (max-width: 568px) {}
+@media screen and (max-width: 413px) {}

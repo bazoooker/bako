@@ -3,7 +3,7 @@ $font_size: 14px !default;
 $font_size_small: 12px !default;
 
 $input_border_radius: 0px !default;
-$input_height: 38px !default;
+$input_height: 50px !default;
 $input_height_small: 36px !default;
 $dropdown_padding: 18px !default;
 
@@ -18,14 +18,12 @@ $arrow_color: $gray !default;
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #fff;
-  border-radius: 0;
-  // border: solid 1px #d0ece6; 
   box-sizing: border-box;
   clear: both;
   cursor: pointer;
   display: block;
   // float: left;
-  width: 175px;
+  width: 100%;
   // flex: 0 0 175px;
   font-family: inherit;
   font-size: $font_size;
@@ -45,24 +43,26 @@ $arrow_color: $gray !default;
       -ms-user-select: none;
           user-select: none;
   white-space: nowrap;
-  // width: auto;
+  border: 1px solid $gray2;
+  padding: 10px 32px 10px 20px;
+
   &:hover {
     border-color: darken($gray_light, 5%);
   }
   &:active, &:focus {
-    border-color: #28aa8c;
+    border-color: $gray3;
   }
   // Arrow
   &:after { 
-    border-bottom: 2px solid $color_main-b;
-    border-right: 2px solid $color_main-b;
+    border-bottom: 2px solid $black;
+    border-right: 2px solid $black;
     content: '';
     display: block; 
-    height: 5px;
+    height: 8px;
     margin-top: -4px;
     pointer-events: none;
     position: absolute; 
-    right: 12px; 
+    right: 18px; 
     top: 50%; 
     -webkit-transform-origin: 66% 66%; 
         -ms-transform-origin: 66% 66%; 
@@ -73,8 +73,10 @@ $arrow_color: $gray !default;
     -webkit-transition  
 : all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-    width: 5px;
+    width: 8px;
   }
+
+  span, li {color: $black;}
   
   &.open {
     @extend :active;
@@ -87,6 +89,8 @@ $arrow_color: $gray !default;
     .list {
       // width: 100%;
       width: auto;
+      border: 1px solid $gray1;
+      min-width: 100%;
       opacity: 1;
       margin-left: 0;
       pointer-events: auto;
@@ -107,8 +111,8 @@ $arrow_color: $gray !default;
     display: block;
     /* width: 15rem; */
     overflow: hidden;
-    font-size: 1.4rem;
-    line-height: 3.1rem;
+    font-size: 14px;
+    line-height: 31px;
   }
   
   // Modifiers
@@ -177,7 +181,8 @@ $arrow_color: $gray !default;
     padding-left: $dropdown_padding;
     padding-right: $dropdown_padding + 11;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 14px;
+    &::before {display: none;}
     -webkit-transition  
 : all 0.2s;
     transition: all 0.2s;

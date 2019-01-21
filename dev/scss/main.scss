@@ -21,6 +21,7 @@
 
 // PAGE TEMPLATE
 @import "block/standard/template/page-header";
+@import "block/standard/template/mobile-header";
 @import "block/standard/template/page-footer";
 
 @import "block/standard/template/page-wrapper"; // block pushing footer to the bottom of the page
@@ -60,21 +61,29 @@
 @import "block/standard/universal/to-top/to-top";
 @import "block/standard/universal/user-options/user-options";
 
-
+// запись на прием
+@import "block/custom/signup/signup";
+@import "block/custom/signup-form/signup-form";
 
 //CUSTOM
 @import "block/custom/fav-num/fav-num";
 @import "block/custom/shop-option/shop-option";
 @import "block/custom/search-form/search-form";
 @import "block/custom/product-thumb/product-thumb";
+@import "block/custom/product-modal/product-modal";
 @import "block/custom/product-controls/product-controls";
+
+@import "block/custom/product-lead/product-lead";
+@import "block/custom/product-feature/product-feature";
 
 @import "block/custom/partner-thumb/partner-thumb";
 
 @import "block/custom/partners/partners";
 @import "block/custom/icon-text/icon-text";
 
+@import "block/custom/news/news";
 @import "block/custom/news-thumb/news-thumb";
+@import "block/custom/product-controls-horiz/product-controls-horiz";
 
 // E-SHOP BLOCKS
 @import "block/standard/e-shop/basket/basket";
@@ -94,9 +103,20 @@
 @import "block/standard/e-shop/product-detail/product-detail";
 @import "block/standard/e-shop/product-detail-heading/product-detail-heading";
 @import "block/standard/e-shop/product-list/product-list";
+@import "block/standard/e-shop/product-category-list/product-category-list";
 @import "block/standard/e-shop/product-list-controls/product-list-controls";
 @import "block/standard/e-shop/product-logo/product-logo";
 @import "block/standard/e-shop/quantity-counter/quantity-counter";
+@import "block/standard/e-shop/sort/sort";
+
+@import "block/standard/e-shop/filter-price/filter-price";
+@import "block/standard/e-shop/filter-manufacturer/filter-manufacturer";
+@import "block/standard/e-shop/filter-manuf-series/filter-manuf-series";
+@import "block/standard/e-shop/filter-type/filter-type";
+
+@import "block/standard/e-shop/ad/ad";
+
+@import "block/standard/e-shop/view/view";
 @import "block/standard/e-shop/sort/sort";
 
 // MISC
@@ -105,6 +125,7 @@
 
 // libs
 @import "assets/libs/animate";
+@import "assets/libs/ion-rangeslider";
 
 
 

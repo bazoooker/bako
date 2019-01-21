@@ -1,0 +1,1990 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+
+    <head>
+        <!-- initial -->
+        <meta charset="utf-8" />
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Exo+2:800" rel="stylesheet">
+        <link href="http://allfont.ru/allfont.css?fonts=clear-sans" rel="stylesheet" type="text/css" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- title -->
+        <title>
+              Бако+
+        </title>
+
+        <!-- meta -->
+        <meta content="e1 framework" name="description" />
+        <meta content="e1 framework" name="keywords" />
+
+        <!-- styles -->
+        <link href="css/swiper.min.css" rel="stylesheet"/>            
+        <link href="css/main.css" rel="stylesheet"/>        <!-- gulp -->
+        <link href="css/custom.css" rel="stylesheet"/>      <!-- css no preprocessor -->
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- <script src="/js/wow.min.js"></script> -->
+    </head>
+
+    <body class="page-wrapper inner-page">
+            
+
+
+
+        <header class="page-header">
+
+            <div class="page-header__topbar stretch stretch_gray">
+                <div class="container">
+                    <nav class='nav'>
+                        <a href="#">Акции</a>
+                        <a href="#">О компании</a>
+                        <a href="#">Партнеры</a>
+                        <a href="#">Производители</a>
+                        <a href="#">Новости</a>
+                        <a href="#">Полезная информация</a>
+                        <a href="#">Доставка и оплата</a>
+                        <a href="#">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="page-header__middlebar">
+                <div class="container">
+                    
+                    <a href="/" class="logo"></a>
+                    <div class="page-header__phone">
+                        <a href="tel:+73852462582"><span>+7&nbsp;(3852)</span>&nbsp;46-25-82</a>
+                        <span>Принимаем ваши заказы</span>
+                    </div>
+                    <div class="page-header__shop-controls">
+                        <a href="#" class="shop-option shop-option_visited">
+                            <span class="icon icon_rounded">
+                                <i class="i i-checkmark"></i>
+                            </span>
+                            <span>Просмотренные <br/>товары</span>
+                        </a>
+                        <a href="#" class="shop-option shop-option_fav-list">
+                            <span class="icon icon_rounded">
+                                <i class="i i-star"></i>
+                                <i class="fav-num fav-num_visible">4</i>
+                            </span>
+                            <span>Список <br/>избранного</span>
+                        </a>
+                        <span class="shop-option shop-option_register js-open-modal" data-target="sign-in">
+                            <span class="icon icon_rounded">
+                                <i class="i i-lock"></i>
+                            </span>
+                            <span>
+                                Вход в кабинет<br/>и регистрация
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-header__bottombar stretch stretch_yellow">
+                <div class="container">
+                    <span id="catalog-menu-in-promo" class="btn-catalog btn_catalog-gray js-catalog-menu">
+                        <span class="i i-burger">
+                            <i class="i-burger__bar"></i>
+                            <i class="i-burger__bar"></i>
+                            <i class="i-burger__bar"></i>
+                        </span>
+                        Каталог товаров
+                    </span>
+                    <div class="search">
+                        <div id="title-search">
+                            <form action="/catalog/search/" class="search-form">
+                                <input id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Искать товар по названию">
+                            </form>
+                        </div>
+                    </div>
+                    <span class="btn-basket js-basket-controls">
+                        <i class="i i-cart">
+                            <span class="i-cart__num">6</span>
+                        </i>
+                        <i class="btn-basket__text">корзина</i>
+                        <i class="btn-basket__total">784 929 Р</i>
+                    </span>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <!-- хедер для мобилок -->
+        <header class="mobile-header">
+            <div class="container">
+                <span class="btn-burger js-open-mobile-menu">
+                    <i class="btn-burger__bar"></i>
+                    <i class="btn-burger__bar"></i>
+                    <i class="btn-burger__bar"></i>
+                </span>
+
+                <a href="/" class="logo"></a>
+
+                <div class="mobile-header__shop-controls">
+                    <div class="shop-option shop-option_register js-open-modal" data-target="sign-in">
+                        <span class="icon icon_rounded">
+                            <i class="i i-lock"></i>
+                        </span>
+                        <div class="shop-option__link-list">
+                        </div>
+                    </div>
+                    <span class="btn-basket js-basket-controls">
+                        <i class="i i-cart">
+                            <span class="i-cart__num">6</span>
+                        </i>
+                    </span>
+                </div>
+            </div>
+        </header>
+
+
+
+
+
+
+        <!-- PAGE CONTENT BEGIN -->            
+        <main class="content bg-texture" role="main">
+            <div class="texture-perehod-top">
+
+
+
+
+
+                <div class="container">
+                    <div class="breadcrumbs">
+                        
+                        <!-- выводи ссылку вместе со стрелкой. У последней ссылки стрелка убирается в css -->
+                        <!-- один уровень -->
+                        <a href="/" title="Главная" class="breadcrumbs__item">
+                            Главная
+                        </a>
+                        <i class="breadcrumb__arrow">
+                            <span class="i i-breadcrumb-arrow"></span>
+                        </i>
+                        <!-- один уровень конец -->
+
+
+
+                        <!-- один уровень -->
+                        <a href="spisok-tovarov.html" title="Инфраструктура" class="breadcrumbs__item">
+                            Каталог
+                        </a>
+                        <i class="breadcrumb__arrow">
+                            <span class="i i-breadcrumb-arrow"></span>
+                        </i>
+                        <!-- один уровень конец -->
+
+
+
+                        <!-- один уровень -->
+                        <a href="detail.html" title="Санаторий «Сибирь»" class="breadcrumbs__item">
+                            Электроустановочные изделия
+                        </a>
+                        <i class="breadcrumb__arrow">
+                            <span class="i i-breadcrumb-arrow"></span>
+                        </i>
+                        <!-- один уровень конец -->
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="container mb-80">
+                    <h1>Выключатели Вессен Schneider-electric</h2>
+
+                    <div class="row product-list">
+                        <div class="col-3 filters">
+                            <aside class="filters__inner">
+                                <span class="filters__close js-show-filters"></span>
+                                <h2>Фильтры</h2>
+                                <h5>Цена</h5>
+
+                                <div class="filter-price">
+                                    <div class="filter-price__inputs">
+                                        <input type="text" class="filter-price__min" value="10000">
+                                        <p>&mdash;</p>
+                                        <input type="text" class="filter-price__max" value="40000">
+                                    </div>
+                                    <div class="filter-price__range">
+                                        <input type="text" class="js-range-slider" name="my_range" value="1" />
+                                    </div>
+                                </div>
+
+                                <h5>Производитель</h5>
+                                <div class="filter-manufacturer">
+                                    <label for="one" class="fancy-checkbox">
+                                        <input id="one" type="checkbox" checked="checked">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        aurora
+                                    </label>
+
+                                    <label for="two" class="fancy-checkbox">
+                                        <input id="two" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        Quattro
+                                    </label>
+
+                                    <label for="three" class="fancy-checkbox">
+                                        <input id="three" type="checkbox" checked="checked">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        einhell
+                                    </label>
+
+                                    <label for="four" class="fancy-checkbox">
+                                        <input id="four" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        fubag
+                                    </label>
+
+                                    <label for="five" class="fancy-checkbox">
+                                        <input id="five" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        интерскол
+                                    </label>
+
+                                    <label for="six" class="fancy-checkbox">
+                                        <input id="six" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        кратон
+                                    </label>
+                                </div>
+
+                                <h5>Серия производителя</h5>
+                                <div class="filter-manuf-series">
+                                    <label for="seven" class="fancy-checkbox">
+                                        <input id="seven" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        aurora
+                                    </label>
+
+                                    <label for="eight" class="fancy-checkbox">
+                                        <input id="eight" type="checkbox" checked="checked">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        Quattro
+                                    </label>
+
+                                    <label for="three" class="fancy-checkbox">
+                                        <input id="nine" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        einhell
+                                    </label>
+
+                                    <label for="four" class="fancy-checkbox">
+                                        <input id="ten" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        fubag
+                                    </label>
+
+                                    <label for="five" class="fancy-checkbox">
+                                        <input id="bla" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        интерскол
+                                    </label>
+
+                                    <label for="six" class="fancy-checkbox">
+                                        <input id="blabla" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        кратон
+                                    </label>
+                                    <label for="one" class="fancy-checkbox">
+                                        <input id="one" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        aurora
+                                    </label>
+
+                                    <label for="two" class="fancy-checkbox">
+                                        <input id="two" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        Quattro
+                                    </label>
+
+                                    <label for="three" class="fancy-checkbox">
+                                        <input id="three" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        einhell
+                                    </label>
+
+                                    <label for="four" class="fancy-checkbox">
+                                        <input id="four" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        fubag
+                                    </label>
+
+                                    <label for="five" class="fancy-checkbox">
+                                        <input id="five" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        интерскол
+                                    </label>
+
+                                    <label for="six" class="fancy-checkbox">
+                                        <input id="six" type="checkbox">
+                                        <span class="fancy-checkbox__checkmark"></span>
+                                        кратон
+                                    </label>
+                                </div>
+
+                                <h5>Тип товара</h5>
+                                <div class="filter-type">
+                                    <select>
+                                        <option data-display="Переключатель клавишный">Переключатель клавишный</option>
+                                        <option value="1">Переключатель другой</option>
+                                        <option value="2">Щелкушка</option>
+                                        <option value="3" disabled>Кнопочный (нет в нал.)</option>
+                                        <option value="4">Двойной совмещенный</option>
+                                    </select>
+                                </div>
+
+                                <a href="#" class="btn btn_main btn_size-l full-width text-center">Применить</a>
+                                <a href="#" class="btn btn_secondary btn_size-l full-width text-center">Очистить фильтр</a>
+
+
+                                <a href="#" class="ad">
+                                    <div class="ad__inner" style="background-image: url(/img/bg/bg-banner.png);"></div>
+                                </a>
+                            </aside>
+                        </div>
+                        <div class="col-9">
+
+                            <div class="product-list-controls">
+                                <span class="btn btn_main btn_size-s js-show-filters">фильтры</span>
+                                <div class="sort">
+                                    <span>Сортировать:</span>
+                                    <a href="javascript:void(0)" class="sort__link active js-prod-sort">по цене</a>
+                                    <a href="javascript:void(0)" class="sort__link js-prod-sort">по наличию</a>
+                                    <a href="javascript:void(0)" class="sort__link js-prod-sort">по популярности</a>
+                                </div>
+                                <div class="view">
+                                    <span>Вид:</span> 
+                                    <div class="view__btn-group">
+                                        <a title="Списком" class="active view-list js-prod-view" href="javascript:void(0)">
+                                            <i class="i view-cards_active"></i>
+                                        </a> 
+                                        <a title="Плиткой" class="view-image js-prod-view" href="javascript:void(0)">
+                                            <i class="i view-list_active"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="product-thumb">
+                                        <span class="product-thumb__fav"></span>
+                                        <div class="product-thumb__body">
+                                            <a href="#" class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></a>
+                                            <a href="#" class="product-thumb__name">Провод СИП 4*16 мж</a>
+                                            <span class="product-thumb__articul">Артикул ER-10-001</span>
+                                        </div>
+                                        <footer class="product-thumb__footer">
+                                            <div class="product-thumb__avail-price">
+                                                <div class="product-thumb__avail">
+                                                    <span>В наличии:</span>
+                                                    <b>больше 10</b>
+                                                </div>
+                                                <div class="product-thumb__price">
+                                                    8 999 &#8381;
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb__controls">
+                                                <div class="product-controls">
+                                                    <div class="product-controls__quant">999</div>
+                                                    <div class="product-controls__arrows">
+                                                        <span class="product-controls__arrow-up">
+                                                            <i class="i i-caret_up"></i>
+                                                        </span>
+                                                        <span class="product-controls__arrow-down">
+                                                            <i class="i i-caret_down"></i>    
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-controls__btn">в корзину</div>
+                                                </div>
+                                            </div>
+                                        </footer>
+
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="product-thumb">
+                                        <span class="product-thumb__fav"></span>
+                                        <div class="product-thumb__body">
+                                            <a href="#" class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></a>
+                                            <a href="#" class="product-thumb__name">Провод СИП 4*16 мж</a>
+                                            <span class="product-thumb__articul">Артикул ER-10-001</span>
+                                        </div>
+                                        <footer class="product-thumb__footer">
+                                            <div class="product-thumb__avail-price">
+                                                <div class="product-thumb__avail">
+                                                    <span>В наличии:</span>
+                                                    <b>больше 10</b>
+                                                </div>
+                                                <div class="product-thumb__price">
+                                                    8 999 &#8381;
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb__controls">
+                                                <div class="product-controls">
+                                                    <div class="product-controls__quant">999</div>
+                                                    <div class="product-controls__arrows">
+                                                        <span class="product-controls__arrow-up">
+                                                            <i class="i i-caret_up"></i>
+                                                        </span>
+                                                        <span class="product-controls__arrow-down">
+                                                            <i class="i i-caret_down"></i>    
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-controls__btn">в корзину</div>
+                                                </div>
+                                            </div>
+                                        </footer>
+
+                                        <div class="product-thumb__badge product-thumb__badge_sale">распродажа</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="product-thumb">
+                                        <span class="product-thumb__fav"></span>
+                                        <div class="product-thumb__body">
+                                            <a href="#" class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></a>
+                                            <a href="#" class="product-thumb__name">Провод СИП 4*16 мж</a>
+                                            <span class="product-thumb__articul">Артикул ER-10-001</span>
+                                        </div>
+                                        <footer class="product-thumb__footer">
+                                            <div class="product-thumb__avail-price">
+                                                <div class="product-thumb__avail">
+                                                    <span>В наличии:</span>
+                                                    <b>больше 10</b>
+                                                </div>
+                                                <div class="product-thumb__price">
+                                                    8 999 &#8381;
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb__controls">
+                                                <div class="product-controls">
+                                                    <div class="product-controls__quant">999</div>
+                                                    <div class="product-controls__arrows">
+                                                        <span class="product-controls__arrow-up">
+                                                            <i class="i i-caret_up"></i>
+                                                        </span>
+                                                        <span class="product-controls__arrow-down">
+                                                            <i class="i i-caret_down"></i>    
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-controls__btn">в корзину</div>
+                                                </div>
+                                            </div>
+                                        </footer>
+
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="product-thumb">
+                                        <span class="product-thumb__fav"></span>
+                                        <div class="product-thumb__body">
+                                            <a href="#" class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></a>
+                                            <a href="#" class="product-thumb__name">Провод СИП 4*16 мж</a>
+                                            <span class="product-thumb__articul">Артикул ER-10-001</span>
+                                        </div>
+                                        <footer class="product-thumb__footer">
+                                            <div class="product-thumb__avail-price">
+                                                <div class="product-thumb__avail">
+                                                    <span>В наличии:</span>
+                                                    <b>больше 10</b>
+                                                </div>
+                                                <div class="product-thumb__price">
+                                                    8 999 &#8381;
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb__controls">
+                                                <div class="product-controls">
+                                                    <div class="product-controls__quant">999</div>
+                                                    <div class="product-controls__arrows">
+                                                        <span class="product-controls__arrow-up">
+                                                            <i class="i i-caret_up"></i>
+                                                        </span>
+                                                        <span class="product-controls__arrow-down">
+                                                            <i class="i i-caret_down"></i>    
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-controls__btn">в корзину</div>
+                                                </div>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="product-thumb">
+                                        <span class="product-thumb__fav"></span>
+                                        <div class="product-thumb__body">
+                                            <a href="#" class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></a>
+                                            <a href="#" class="product-thumb__name">Провод СИП 4*16 мж</a>
+                                            <span class="product-thumb__articul">Артикул ER-10-001</span>
+                                        </div>
+                                        <footer class="product-thumb__footer">
+                                            <div class="product-thumb__avail-price">
+                                                <div class="product-thumb__avail">
+                                                    <span>В наличии:</span>
+                                                    <b>больше 10</b>
+                                                </div>
+                                                <div class="product-thumb__price">
+                                                    8 999 &#8381;
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb__controls">
+                                                <div class="product-controls">
+                                                    <div class="product-controls__quant">999</div>
+                                                    <div class="product-controls__arrows">
+                                                        <span class="product-controls__arrow-up">
+                                                            <i class="i i-caret_up"></i>
+                                                        </span>
+                                                        <span class="product-controls__arrow-down">
+                                                            <i class="i i-caret_down"></i>    
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-controls__btn">в корзину</div>
+                                                </div>
+                                            </div>
+                                        </footer>
+
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="product-thumb">
+                                        <span class="product-thumb__fav"></span>
+                                        <div class="product-thumb__body">
+                                            <a href="#" class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></a>
+                                            <a href="#" class="product-thumb__name">Провод СИП 4*16 мж</a>
+                                            <span class="product-thumb__articul">Артикул ER-10-001</span>
+                                        </div>
+                                        <footer class="product-thumb__footer">
+                                            <div class="product-thumb__avail-price">
+                                                <div class="product-thumb__avail">
+                                                    <span>В наличии:</span>
+                                                    <b>больше 10</b>
+                                                </div>
+                                                <div class="product-thumb__price">
+                                                    8 999 &#8381;
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb__controls">
+                                                <div class="product-controls">
+                                                    <div class="product-controls__quant">999</div>
+                                                    <div class="product-controls__arrows">
+                                                        <span class="product-controls__arrow-up">
+                                                            <i class="i i-caret_up"></i>
+                                                        </span>
+                                                        <span class="product-controls__arrow-down">
+                                                            <i class="i i-caret_down"></i>    
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-controls__btn">в корзину</div>
+                                                </div>
+                                            </div>
+                                        </footer>
+                                        <div class="product-thumb__badge product-thumb__badge_sale">распродажа</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="product-thumb">
+                                        <span class="product-thumb__fav"></span>
+                                        <div class="product-thumb__body">
+                                            <a href="#" class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></a>
+                                            <a href="#" class="product-thumb__name">Провод СИП 4*16 мж</a>
+                                            <span class="product-thumb__articul">Артикул ER-10-001</span>
+                                        </div>
+                                        <footer class="product-thumb__footer">
+                                            <div class="product-thumb__avail-price">
+                                                <div class="product-thumb__avail">
+                                                    <span>В наличии:</span>
+                                                    <b>больше 10</b>
+                                                </div>
+                                                <div class="product-thumb__price">
+                                                    8 999 &#8381;
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb__controls">
+                                                <div class="product-controls">
+                                                    <div class="product-controls__quant">999</div>
+                                                    <div class="product-controls__arrows">
+                                                        <span class="product-controls__arrow-up">
+                                                            <i class="i i-caret_up"></i>
+                                                        </span>
+                                                        <span class="product-controls__arrow-down">
+                                                            <i class="i i-caret_down"></i>    
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-controls__btn">в корзину</div>
+                                                </div>
+                                            </div>
+                                        </footer>
+
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="product-thumb">
+                                        <span class="product-thumb__fav"></span>
+                                        <div class="product-thumb__body">
+                                            <a href="#" class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></a>
+                                            <a href="#" class="product-thumb__name">Провод СИП 4*16 мж</a>
+                                            <span class="product-thumb__articul">Артикул ER-10-001</span>
+                                        </div>
+                                        <footer class="product-thumb__footer">
+                                            <div class="product-thumb__avail-price">
+                                                <div class="product-thumb__avail">
+                                                    <span>В наличии:</span>
+                                                    <b>больше 10</b>
+                                                </div>
+                                                <div class="product-thumb__price">
+                                                    8 999 &#8381;
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb__controls">
+                                                <div class="product-controls">
+                                                    <div class="product-controls__quant">999</div>
+                                                    <div class="product-controls__arrows">
+                                                        <span class="product-controls__arrow-up">
+                                                            <i class="i i-caret_up"></i>
+                                                        </span>
+                                                        <span class="product-controls__arrow-down">
+                                                            <i class="i i-caret_down"></i>    
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-controls__btn">в корзину</div>
+                                                </div>
+                                            </div>
+                                        </footer>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="product-thumb">
+                                        <span class="product-thumb__fav"></span>
+                                        <div class="product-thumb__body">
+                                            <a href="#" class="product-thumb__img" style="background-image: url(/img/goods/prod-1.jpg);"></a>
+                                            <a href="#" class="product-thumb__name">Провод СИП 4*16 мж</a>
+                                            <span class="product-thumb__articul">Артикул ER-10-001</span>
+                                        </div>
+                                        <footer class="product-thumb__footer">
+                                            <div class="product-thumb__avail-price">
+                                                <div class="product-thumb__avail">
+                                                    <span>В наличии:</span>
+                                                    <b>больше 10</b>
+                                                </div>
+                                                <div class="product-thumb__price">
+                                                    8 999 &#8381;
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb__controls">
+                                                <div class="product-controls">
+                                                    <div class="product-controls__quant">999</div>
+                                                    <div class="product-controls__arrows">
+                                                        <span class="product-controls__arrow-up">
+                                                            <i class="i i-caret_up"></i>
+                                                        </span>
+                                                        <span class="product-controls__arrow-down">
+                                                            <i class="i i-caret_down"></i>    
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-controls__btn">в корзину</div>
+                                                </div>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+
+                             </div>
+                        </div>
+                    </div> <!-- product-list -->
+
+
+                </div><!-- container -->
+            </div><!-- texture perehod -->
+
+
+
+
+
+
+            <footer class="page-footer">
+                <div class="container">
+
+                    <div class="page-footer__top">
+                        <a href="" class="logo logo_white"></a>
+                        <div class="page-footer__company-info">
+                            <div class="page-footer__company-info-item footer__company-info-item_address">
+                                <span class="icon">
+                                    <i class="i i-pin"></i>
+                                </span>
+                                <span>Барнаул, ул. Бабуркина, 7</span>
+                            </div>
+                            <a href="№" class="page-footer__company-info-item footer__company-info-item_tel">
+                                <span class="icon">
+                                    <i class="i i-phone"></i>
+                                </span>
+                                <span>+7 (3852) 46-25-82</span>
+                            </a>
+                            <a href="№" class="page-footer__company-info-item footer__company-info-item_mail">
+                                <span class="icon">
+                                    <i class="i i-mail"></i>
+                                </span>
+                                <span>info@bakoplus.ru</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="page-footer__links">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="page-footer__link-col">
+                                    <h4>О компании</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                Бакоплюс
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Доставка и оплата
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Сертификаты
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                               Производители
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Контакты
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Новости
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Полезная информация
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Политика конфиденциальности
+                                            </a>
+                                        </li>
+                                    </ul>    
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="page-footer__link-col">
+                                    <h4>продукция</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                Электрощиты серийные
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Сантехническая продукция
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Кабель и провод
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Изделия для монтажа КПП
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Счетчики электроэнергии
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Электроустановочные изделия
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Светильники, таймеры движения
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Электродвигатели
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Навигатор, онлайт
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="page-footer__link-col">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                Электроустановочные изделия
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Светильники, таймеры движения
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Электродвигатели
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Навигатор, онлайт
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Предохранители, патроны ПТ
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                План электрик
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Коробки, патроны, боксы
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Пускатели, контакторы, реле
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Кнопки, выкл, пост ПКТ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="page-footer__link-col">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                План электрик
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Коробки, патроны, боксы
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Пускатели, контакторы, реле
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Кнопки, выкл, пост ПКТ
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Рубильники, разъединители
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Электрощиты серийные
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Сантехническая продукция
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Кабель и провод
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Изделия для монтажа КПП
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-footer__legal">
+                    <div class="container">
+                        <span class="page-footer__copy">
+                            © 2007 — 2018  ООО «БАКОПЛЮС»
+                        </span>
+                        <span class="page-footer__by ">Разработка сайта - <a class="made-by uppercase">e1me<span class="yellow">d</span>ia</a></span>
+                    </div>
+                </div>
+            </footer>
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============================================================================ -->
+<!-- контент, который показывается по событию: модалки и пр -->
+
+
+
+
+
+
+<!-- =========================
+
+STICKY HEADER
+
+============================-->
+
+<div class="sticky-header">
+    <div class="container">
+
+        <a href="/" class="logo logo_white"></a>
+        <span id="catalog-menu-in-sticky-header" class="btn-catalog btn_catalog-gray js-catalog-menu">
+            <span class="i i-burger">
+                <i class="i-burger__bar"></i>
+                <i class="i-burger__bar"></i>
+                <i class="i-burger__bar"></i>
+            </span>
+            <span class="btn-catalog__text">Каталог</span>
+        </span>
+
+        <div class="search">
+            <div id="title-search">
+                <form action="/catalog/search/" class="search-form">
+                    <input id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Искать товар по названию">
+                    </form>
+            </div>
+            </form>
+        </div>
+
+
+        <div class="sticky-header__shop-controls">
+            <a href="#" class="shop-option shop-option_visited">
+                <span class="icon icon_rounded">
+                    <i class="i i-checkmark"></i>
+                </span>
+
+            </a>
+            <a href="#" class="shop-option shop-option_fav-list">
+                <span class="icon icon_rounded">
+                    <i class="i i-star"></i>
+                    <i class="fav-num fav-num_visible">4</i> <!-- класс fav-num_visible для анимации появления/скрытия -->
+                </span>
+
+            </a>
+            <div class="shop-option shop-option_register js-open-modal" data-target="sign-in">
+                <span class="icon icon_rounded">
+                    <i class="i i-lock"></i>
+                </span>
+                <div class="shop-option__link-list">
+                    <!--
+                        <a href="#">Вход в кабинет</a> 
+                        <a href="#">Регистрация</a> 
+                    -->
+                </div>
+            </div>
+            <span class="btn-basket js-basket-controls">
+                <i class="i i-cart">
+                    <span class="i-cart__num">6</span>
+                </i>
+                <i class="btn-basket__total">84 929 Р</i>
+            </span>
+        </div>
+    </div>
+    <div id="progress"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================
+
+CABINET MODALS
+
+============================-->
+
+
+<!-- sign-in -->
+
+<div class="modal" id="sign-in">
+
+    <div class="modal__wrapper">
+    
+        
+        <span class="modal__close js-close-modal"></span>
+        <div class="container">
+
+            <div class="signup__form">
+
+                <div class="caption mb-20">
+                    <h2>Вход в личный кабинет</h2>
+                </div>
+
+                <form class="signup-form" action=''  data-wow-delay="1100ms" data-wow-duration="700ms">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="signup-form__label">
+                                <input type="text" class="js-floating-label">
+                                <span class="signup-form__floating-placeholder">Электронная почта</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="signup-form__label">
+                                <input type="text" class="js-floating-label signup-form__masked-tel">
+                                <span class="signup-form__floating-placeholder">Пароль</span>
+                            </div>
+
+                            <small><a href="javascript:void(0)" class="js-open-modal" data-target="pass-recovery">Забыли пароль?</a></small>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mb-20">
+                        <a href="#" class="btn btn_main btn_size-l" style="width: 100%;">Войти</a>
+                    </div>
+                    <div class="text-center">
+                        <a href="javascript:void(0)" class="js-open-modal" data-target="registration">Зарегистрироваться</a><br/>
+                        <!-- <small><a href="javascript:void(0)" class="js-open-modal" data-target="pass-recovery">Забыли пароль?</a></small> -->
+                    </div>
+
+                </form>
+                                                    
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- registration -->
+
+<div class="modal" id="registration">
+    <div class="modal__wrapper">
+        <span class="modal__close js-close-modal"></span>
+        <div class="container">
+
+            <div class="signup__form">
+
+                <div class="caption mb-20">
+                    <h2>Регистрация</h2>
+                </div>
+
+                <form class="signup-form" action=''  data-wow-delay="1100ms" data-wow-duration="700ms">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="signup-form__label">
+                                <input type="text" class="js-floating-label">
+                                <span class="signup-form__floating-placeholder">Электронная почта</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="signup-form__label">
+                                <input type="text" class="js-floating-label signup-form__masked-tel">
+                                <span class="signup-form__floating-placeholder">Пароль</span>
+                            </div>
+
+                            <!-- <small><a href="#">Забыли пароль?</a></small> -->
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mb-20">
+                        <a href="#" class="btn btn_main btn_size-l" style="width: 100%;">Зарегистрироваться</a>
+                    </div>
+                    <div class="text-center mb-20">
+                        <a href="javascript:void(0)" class="js-open-modal" data-target="sign-in">Я уже зарегистрирован</a>
+                    </div>
+                    <div class="text-center">
+                        <p><small>Регистрируясь на этом сайте вы соглашаетесь с <a href="#">политикой</a> обработки персональных данных.</small></p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- pass-recovery -->
+
+<div class="modal" id="pass-recovery">
+    <div class="modal__wrapper">
+        <span class="modal__close js-close-modal"></span>
+        <div class="container">
+
+            <div class="signup__form">
+
+                <div class="caption mb-20">
+                    <h2>Восстановление пароля</h2>
+                </div>
+
+                <form class="signup-form" action=''>
+
+                    <div class="mb-20">
+                        <div class="signup-form__label">
+                            <input type="text" class="js-floating-label">
+                            <span class="signup-form__floating-placeholder">Электронная почта</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-20">
+                    <!-- <p> -->
+                        <small class="modal__note mb-20">Укажите электронную почту, которую вы вводили при регистрации или заказе. Мы вышлем на нее инструкции по восстановлению пароля. Обычно письмо с инструкциями приходит в течение нескольких минут.</small>
+                    <!-- </p> -->
+                    </div>
+                    
+                    <div class="text-center mb-20">
+                        <a href="#" class="btn btn_main btn_size-l" style="width: 100%;">Получить инструкции</a>
+                    </div>
+                    <div class="text-center mb-20">
+                        <a href="javascript:void(0)" class="js-open-modal" data-target="sign-in">Вспомнили пароль?</a>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================
+
+MOBILE MENU
+
+============================-->
+
+
+
+
+<div class="menu menu_mobile-menu menu_full-screen" id="mobile-menu">
+<!-- <div class="menu menu_full-screen"> -->
+    <div class="menu__wrapper">
+
+        <header class="menu__header">
+            <div class="menu__phone">
+                <a href="tel:+73852462582">
+                    +7 (3852) 46-25-82<br/>
+                    <span>Принимаем ваши заказы</span>
+                </a>
+            </div>
+
+            <span class="menu__close js-open-mobile-menu"></span>
+        </header>
+
+        <div class="container">
+            <div class="menu__basket">
+                <span class="btn-basket js-basket-controls">
+                    <i class="i i-cart">
+                        <span class="i-cart__num">6</span>
+                    </i>
+                    <i class="btn-basket__total">784 929 Р</i>
+                </span>
+            </div>
+
+            <nav class="menu__nav">
+                <a href="#" class="menu-link">Кабель и провод</a>
+                <a href="#" class="menu-link">Изделия для монтажа КПП</a>
+                <a href="#" class="menu-link">Счетчики электроэнергии</a>
+                <a href="#" class="menu-link">Электроустановочные изделия (выклдчаетли, розетки, рамки)</a>
+                <a href="#" class="menu-link">Электроустановочные изделия (выклдчаетли, розетки, рамки)</a>
+
+                <a>Свтеильники, дроссели, таймеры, датчики движения</a>
+            </nav>
+
+            <div class="search">
+                <div id="title-search">
+                    <form action="/catalog/search/" class="search-form">
+                        <input id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Искать товар по названию">
+                        <!-- <input name="s" type="submit" value=""> -->
+                    </form>
+                </div>
+
+<!--                             <script>
+                        BX.ready(function(){
+                            new JCTitleSearch({
+                                'AJAX_PAGE' : '/',
+                                'CONTAINER_ID': 'title-search',
+                                'INPUT_ID': 'title-search-input',
+                                'MIN_QUERY_LEN': 2
+                            });
+                        });
+                    </script> -->
+
+                </form>
+            </div>
+            
+        </div>
+
+
+        <footer class="menu__footer">
+            <div class="container">
+
+        <div class="page-footer__top">
+            <a href="" class="logo logo_white"></a>
+            <div class="page-footer__company-info">
+                <div class="page-footer__company-info-item footer__company-info-item_address">
+                    <span class="icon">
+                        <i class="i i-pin"></i>
+                    </span>
+                    <span>Барнаул, ул. Бабуркина, 7</span>
+                </div>
+                <a href="№" class="page-footer__company-info-item footer__company-info-item_tel">
+                    <span class="icon">
+                        <i class="i i-phone"></i>
+                    </span>
+                    <span>+7 (3852) 46-25-82</span>
+                </a>
+                <a href="№" class="page-footer__company-info-item footer__company-info-item_mail">
+                    <span class="icon">
+                        <i class="i i-mail"></i>
+                    </span>
+                    <span>info@bakoplus.ru</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="page-footer__links">
+            <div class="row">
+                <div class="col-3">
+                    <div class="page-footer__link-col">
+                        <h4>О компании</h4>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Бакоплюс
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Доставка и оплата
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Сертификаты
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   Производители
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Новости
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Полезная информация
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Политика конфиденциальности
+                                </a>
+                            </li>
+                        </ul>    
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="page-footer__link-col">
+                        <h4>продукция</h4>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Электрощиты серийные
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Сантехническая продукция
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Кабель и провод
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Изделия для монтажа КПП
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Счетчики электроэнергии
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Электроустановочные изделия
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Светильники, таймеры движения
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Электродвигатели
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Навигатор, онлайт
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="page-footer__link-col">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Электроустановочные изделия
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Светильники, таймеры движения
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Электродвигатели
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Навигатор, онлайт
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Предохранители, патроны ПТ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    План электрик
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Коробки, патроны, боксы
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Пускатели, контакторы, реле
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Кнопки, выкл, пост ПКТ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="page-footer__link-col">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    План электрик
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Коробки, патроны, боксы
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Пускатели, контакторы, реле
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Кнопки, выкл, пост ПКТ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Рубильники, разъединители
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Электрощиты серийные
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Сантехническая продукция
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Кабель и провод
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Изделия для монтажа КПП
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </footer>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================
+
+CATALOG POP UP MENU
+
+============================-->
+
+
+
+<!-- модалка каталог -->
+<div id="catalog-menu" class="menu menu_full-screen">
+
+    <div class="container">
+        <div class="menu__body">
+            <div class="menu__product-categories">
+
+                <div class="catalog-link">
+                    <span class="catalog-link__label active js-show-product-list" id="category1">
+                        Кабель и провод <i>23</i>
+                    </span>
+
+                    <div class="catalog-link__accordeon">
+                        <a href="">Атлас</a>
+                        <a href="">Бланка - Schneider-electric</a>
+                        <a href="">Атлас</a>
+                        <a href="">Бланка - Schneider-electric</a>
+                        <a href="">Атлас</a>
+                        <a href="">Бланка - Schneider-electric</a>
+                    </div>
+                </div>
+
+                <div class="catalog-link">
+                    <span class="catalog-link__label js-show-product-list" id="category2">
+                        Изделия для монтажа КПП <i>12</i>
+                    </span>
+
+                    <div class="catalog-link__accordeon">
+                        <a href="">Прима - Schneider-electric</a>
+                        <a href="">Хит-Schneider-electric</a>
+                        <a href="">Прима - Schneider-electric</a>
+                        <a href="">Хит-Schneider-electric</a>
+                        <a href="">Прима - Schneider-electric</a>
+                        <a href="">Хит-Schneider-electric</a>
+                        <a href="">Прима - Schneider-electric</a>
+                        <a href="">Хит-Schneider-electric</a>
+                        <a href="">Прима - Schneider-electric</a>
+                        <a href="">Хит-Schneider-electric</a>
+                        <a href="">Прима - Schneider-electric</a>
+                        <a href="">Хит-Schneider-electric</a>
+                    </div>
+                </div>
+
+                <div class="catalog-link">
+                    <span class="catalog-link__label js-show-product-list" id="category3">
+                        Счётчики электроэнергии <i>23</i>
+                    </span>
+
+                    <div class="catalog-link__accordeon">
+                        <a href="">Вессен 59-Schneider-electric</a>
+                        <a href="">Рондо - Schneider-electric</a>
+                        <a href="">Вессен 59-Schneider-electric</a>
+                        <a href="">Рондо - Schneider-electric</a>
+                        <a href="">Вессен 59-Schneider-electric</a>
+                        <a href="">Рондо - Schneider-electric</a>
+                        <a href="">Вессен 59-Schneider-electric</a>
+                        <a href="">Рондо - Schneider-electric</a>
+                    </div>
+                </div>
+
+                <div class="catalog-link">
+                    <span class="catalog-link__label js-show-product-list" id="category4">
+                        Электроустановочные изделия (Выключатели, Розетки,  Рамки) <i>23</i>
+                    </span>
+
+                    <div class="catalog-link__accordeon">
+                        <a href="">Этюд - Schneider-electric</a>
+                        <a href="">Седна- Schneider-electric</a>
+                        <a href="">Этюд - Schneider-electric</a>
+                        <a href="">Седна- Schneider-electric</a>
+                        <a href="">Этюд - Schneider-electric</a>
+                        <a href="">Седна- Schneider-electric</a>
+                        <a href="">Этюд - Schneider-electric</a>
+                        <a href="">Седна- Schneider-electric</a>
+                    </div>
+                </div>
+
+                <div class="catalog-link">
+                    <span class="catalog-link__label js-show-product-list" id="category5">
+                        Светильники, дроссели,таймеры, датчики движения  <i>23</i>
+                    </span>
+
+                    <div class="catalog-link__accordeon">
+                        <a href="">Глосса - Schneider-electric</a>
+                        <a href="">МИРА Lezard СУ</a>
+                        <a href="">Глосса - Schneider-electric</a>
+                        <a href="">МИРА Lezard СУ</a>
+                        <a href="">Глосса - Schneider-electric</a>
+                        <a href="">МИРА Lezard СУ</a>
+                        <a href="">Глосса - Schneider-electric</a>
+                        <a href="">МИРА Lezard СУ</a>
+                    </div>
+                </div>
+
+                <div class="catalog-link">
+                    <span class="catalog-link__label js-show-product-list" id="category6">
+                        Кабель и провод <i>23</i>
+                    </span>
+
+                    <div class="catalog-link__accordeon">
+                        <a href="">НАТА Lezard ОУ</a>
+                        <a href="">ДЕРИ Lezard СУ</a>
+                        <a href="">НАТА Lezard ОУ</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="menu__product-items">
+
+                <div class="product-list active" data-id="category1">
+                    <a href="">Атлас</a>
+                    <a href="">Бланка - Schneider-electric</a>
+                    <a href="">Атлас</a>
+                    <a href="">Бланка - Schneider-electric</a>
+                    <a href="">Атлас</a>
+                    <a href="">Бланка - Schneider-electric</a>
+                </div>
+
+                <div class="product-list" data-id="category2">
+                    <a href="">Прима - Schneider-electric</a>
+                    <a href="">Хит-Schneider-electric</a>
+                    <a href="">Прима - Schneider-electric</a>
+                    <a href="">Хит-Schneider-electric</a>
+                    <a href="">Прима - Schneider-electric</a>
+                    <a href="">Хит-Schneider-electric</a>
+                    <a href="">Прима - Schneider-electric</a>
+                    <a href="">Хит-Schneider-electric</a>
+                    <a href="">Прима - Schneider-electric</a>
+                    <a href="">Хит-Schneider-electric</a>
+                    <a href="">Прима - Schneider-electric</a>
+                    <a href="">Хит-Schneider-electric</a>
+                </div>
+
+                <div class="product-list" data-id="category3">
+                    <a href="">Вессен 59-Schneider-electric</a>
+                    <a href="">Рондо - Schneider-electric</a>
+                    <a href="">Вессен 59-Schneider-electric</a>
+                    <a href="">Рондо - Schneider-electric</a>
+                    <a href="">Вессен 59-Schneider-electric</a>
+                    <a href="">Рондо - Schneider-electric</a>
+                    <a href="">Вессен 59-Schneider-electric</a>
+                    <a href="">Рондо - Schneider-electric</a>
+                </div>
+
+                <div class="product-list" data-id="category4">
+                    <a href="">Этюд - Schneider-electric</a>
+                    <a href="">Седна- Schneider-electric</a>
+                    <a href="">Этюд - Schneider-electric</a>
+                    <a href="">Седна- Schneider-electric</a>
+                    <a href="">Этюд - Schneider-electric</a>
+                    <a href="">Седна- Schneider-electric</a>
+                    <a href="">Этюд - Schneider-electric</a>
+                    <a href="">Седна- Schneider-electric</a>
+                </div>
+
+                <div class="product-list" data-id="category5">
+                    <a href="">Глосса - Schneider-electric</a>
+                    <a href="">МИРА Lezard СУ</a>
+                    <a href="">Глосса - Schneider-electric</a>
+                    <a href="">МИРА Lezard СУ</a>
+                    <a href="">Глосса - Schneider-electric</a>
+                    <a href="">МИРА Lezard СУ</a>
+                    <a href="">Глосса - Schneider-electric</a>
+                    <a href="">МИРА Lezard СУ</a>
+                </div>
+
+                <div class="product-list" data-id="category6">
+                    <a href="">ДЕРИ Lezard СУ</a>
+                    <a href="">НАТА Lezard ОУ</a>
+                    <a href="">ДЕРИ Lezard СУ</a>
+                    <a href="">НАТА Lezard ОУ</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================
+
+BASKET MODAL
+
+============================-->
+
+
+
+        <!-- модалка корзина -->
+        <div class="basket">
+            <header class="basket__header">
+                <h3><i class="i i-cart_filled">
+                        <span class="i-cart__num">6</span>
+                    </i>
+                    Ваша корзина
+                </h3>
+            </header>
+
+            <div class="basket__product-list">
+
+                <div class="product-modal">  <!--один товар в корзине-модалке начало-->              
+                    <div class="product-modal__info">
+                        <a class="product-modal__name" href="#">
+                            Розетка силовая Glossa 16А 250В IP20 белый, с заземлением Schneider
+                        </a>
+                        <div class="product-modal__controls">
+                            <div class="product-controls-horiz">
+                                    <span class="product-controls-horiz__arrow-left">
+                                        <i class="i i-caret_up"></i>
+                                    </span>
+
+                                    <input id="" type="text" name="quantity" class="product-controls-horiz__quant" value="1">
+
+                                    <span class="product-controls-horiz__arrow-right">
+                                        <i class="i i-caret_down"></i>    
+                                    </span>
+                            </div>
+                            <span class="product-modal__price">920 руб.</span>
+                        </div>
+                    </div>
+                    <a href="#" class="product-modal__img" style="background-image: url(/img/goods/prod-3.jpg);"></a>
+                </div><!--один товар в корзине-модалке конец-->
+
+                <div class="product-modal">  <!--один товар в корзине-модалке начало-->              
+                    <div class="product-modal__info">
+                        <a class="product-modal__name" href="#">
+                            Розетка силовая Glossa 16А 250В IP20 белый, с заземлением Schneider
+                        </a>
+                        <div class="product-modal__controls">
+                            <div class="product-controls-horiz">
+                                    <span class="product-controls-horiz__arrow-left">
+                                        <i class="i i-caret_up"></i>
+                                    </span>
+
+                                    <input id="" type="text" name="quantity" class="product-controls-horiz__quant" value="12">
+
+                                    <span class="product-controls-horiz__arrow-right">
+                                        <i class="i i-caret_down"></i>    
+                                    </span>
+                            </div>
+                            <span class="product-modal__price">1720 руб.</span>
+                        </div>
+                    </div>
+                    <a href="#" class="product-modal__img" style="background-image: url(/img/goods/prod-3.jpg);"></a>
+                </div><!--один товар в корзине-модалке конец-->
+
+                <div class="product-modal">  <!--один товар в корзине-модалке начало-->              
+                    <div class="product-modal__info">
+                        <a class="product-modal__name" href="#">
+                            Розетка силовая Glossa 16А 250В IP20 белый, с заземлением Schneider
+                        </a>
+                        <div class="product-modal__controls">
+                            <div class="product-controls-horiz">
+                                    <span class="product-controls-horiz__arrow-left">
+                                        <i class="i i-caret_up"></i>
+                                    </span>
+
+                                    <input id="" type="text" name="quantity" class="product-controls-horiz__quant" value="492">
+
+                                    <span class="product-controls-horiz__arrow-right">
+                                        <i class="i i-caret_down"></i>    
+                                    </span>
+                            </div>
+                            <span class="product-modal__price">71120 руб.</span>
+                        </div>
+                    </div>
+                    <a href="#" class="product-modal__img" style="background-image: url(/img/goods/prod-3.jpg);"></a>
+                </div><!--один товар в корзине-модалке конец-->
+
+                <div class="product-modal">  <!--один товар в корзине-модалке начало-->              
+                    <div class="product-modal__info">
+                        <a class="product-modal__name" href="#">
+                            Розетка силовая Glossa 16А 250В IP20 белый, с заземлением Schneider
+                        </a>
+                        <div class="product-modal__controls">
+                            <div class="product-controls-horiz">
+                                    <span class="product-controls-horiz__arrow-left">
+                                        <i class="i i-caret_up"></i>
+                                    </span>
+
+                                    <input id="" type="text" name="quantity" class="product-controls-horiz__quant" value="77">
+
+                                    <span class="product-controls-horiz__arrow-right">
+                                        <i class="i i-caret_down"></i>    
+                                    </span>
+                            </div>
+                            <span class="product-modal__price">29 руб.</span>
+                        </div>
+                    </div>
+                    <a href="#" class="product-modal__img" style="background-image: url(/img/goods/prod-3.jpg);"></a>
+                </div><!--один товар в корзине-модалке конец-->
+
+            </div>
+
+            <footer class="basket__footer">
+               <a href="" class="btn btn_main btn_size-l basket__btn">оформить заказ</a>
+               <div class="basket__total">
+                   <span class="basket__note">Итого 7 товаров на сумму</span>
+                   <span class="basket__sum">1620 руб.</span>
+               </div>
+            </footer>
+
+            <div class="basket__btn-close js-basket-controls"></div>
+        </div>
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <!-- SCROLL-TO-TOP BEGIN -->
+        <div class="to-top js-scroll-to-top"></div>
+        <!-- SCROLL-TO-TOP END -->
+        
+          
+
+        <div class="overlay overlay_basket js-basket-controls"></div>
+        <div class="overlay overlay_catalog-menu"></div>
+        <div class="overlay overlay_modal js-close-modal"></div>
+        <div class="overlay overlay_filters js-show-filters"></div>
+
+        <!-- scripts -->
+        
+        <!-- <script src="/js/modernizr.custom.62035.js" type="text/javascript"></script> -->
+        <script src="/js/swiper.min.js"></script>
+        <script src="/js/ion.rangeSlider.js"></script>
+        <script src="/js/jquery.nice-select.min.js"></script>
+        <script src="/js/jquery.visible.min.js"></script>
+        <script src="/js/script.js"></script>
+        <script src="/js/common.js"></script>
+
+
+    </body>
+</html>

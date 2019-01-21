@@ -1,0 +1,76 @@
+.product-modal {
+	// поведение
+	@include flex-row(nowrap,space-between,center);
+	padding: 20px 0;
+
+
+	// стили
+	border-bottom: 1px solid $gray2;
+}
+
+.product-modal__info {}
+.product-modal__name {
+	// поведение
+	display: block;
+	flex-grow: 1;
+	margin: 0 0 17px 0;
+
+	// стили
+	color: $black;
+	@include font-kit(19px,18px,17px,15px,14px);
+	font-size: 19px;	font-weight: 600;
+	text-transform: uppercase;
+
+	&:visited, &:active {color: black;}
+}
+.product-modal__controls {
+	@include flex-row(nowrap,space-between,center);
+}
+
+.product-modal__price {
+	@include font-kit(20px,18px,17px,16px,20px);
+	font-weight: 600;
+	color: $black;
+}
+
+.product-modal__img {
+	// поведение
+	flex: 0 0 75px;
+	max-width: 75px; /*IE*/
+	height: 75px;
+	margin: 0 0 0 10px;
+
+	// стили
+	border: 2px solid transparent;
+	@include bg-contain;
+	transition: $tr2;
+
+
+	&:hover {
+		border: 2px solid $yellow;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.product-modal__controls {
+		@include flex-row(wrap,space-between,center);
+	}
+	.product-modal__price {
+		// поведение
+		flex: 1 1 100%;
+		max-width: 100%;
+
+		// стили
+		margin: 20px 0 0 0;
+	}
+}
+
+@media screen and (max-width: 374px) {
+	.basket {
+		padding: 25px 25px !important;
+	}
+	.product-modal__img {
+		display: none;
+	}
+}
+

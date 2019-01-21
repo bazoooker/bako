@@ -54,7 +54,7 @@
 		.btn-catalog {
 			background-color: $gray4;
 			color: #fff;
-		    min-width: 204px;
+		    min-width: 149px;
 			transition: $tr2;
 
 		    &::before {
@@ -75,7 +75,7 @@
 		    }
 
 		    &:hover {
-				background-color: $blue;
+				background-color: $black;
 		    }
 		    
 			// ВЕРНУТЬ
@@ -233,4 +233,59 @@
 	100% {
 		transform: rotateY(0deg)
 	}
+}
+
+
+
+
+
+// responsiveness
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+	.sticky-header {
+		.container {
+			padding: 0;
+
+			.logo {
+				flex: 0 0 115px;
+				padding: 0 10px;
+				background-position: 50% 50%;
+			}
+			.btn-basket {
+				width: 65px;
+				padding: 0;
+				min-width: 65px;
+				.i-cart {left: 18px;}
+			}
+			.btn-basket__total {
+				display: none;
+			}
+		} 
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.sticky-header {
+		.container {
+			.shop-option_visited{ display: none; }
+			.shop-option_fav-list {border-left: 1px solid #ccaa02;}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.sticky-header {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	
+}
+
+@media screen and (max-width: 413px) {
+	
 }

@@ -1,0 +1,50 @@
+.product-controls-horiz {
+	@include flex-row(nowrap, flex-start,stretch);
+	height: 44px;
+	border: 1px solid $gray2;
+	width: 158px;
+	max-width: 158px; /*IE*/
+}
+.product-controls-horiz__quant {
+	// поведение
+	flex-grow: 1;
+	flex: 68px;
+	max-width: 68px;
+
+	// стили
+	border: 0;
+	border-left: 1px solid $gray2;
+	border-right: 1px solid $gray2;
+	outline: 0;
+	text-align: center;
+}
+
+.product-controls-horiz__arrow-left,
+.product-controls-horiz__arrow-right {
+	// поведение
+	display: block;
+	position: relative;
+	width: 44px;
+	flex: 0 0 44px;
+	height: 100%;
+
+	// стили
+	cursor: pointer;
+	transition: $tr2;
+
+	&:hover {
+		background-color: $yellow;
+	}
+
+}
+
+.product-controls-horiz__arrow-left {
+	.i-caret_up {
+		transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+	}
+}
+.product-controls-horiz__arrow-right {
+	.i-caret_down {
+		transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+	}
+}

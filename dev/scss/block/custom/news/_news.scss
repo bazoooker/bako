@@ -1,0 +1,27 @@
+.news {}
+
+@media screen and (max-width: 992px) {
+	.news {
+
+
+
+		// оставить текстоые новости и сделать их в три строки
+
+		// .col-4:last-of-type {
+		// 	flex: 1 1 100%;
+		// 	max-width: 100%;
+
+		// 	@include flex-row(nowrap,space-between,flex-start);
+
+		// 	.news-thumb {flex: 1 1 33%;}
+		// }
+
+
+
+
+		
+		.col-4:last-of-type {
+			display: none;
+		}
+	}
+}

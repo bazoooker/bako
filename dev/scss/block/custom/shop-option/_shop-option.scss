@@ -1,19 +1,21 @@
 .shop-option {
 	margin-right: 10px;
 	@include flex-row(nowrap,flex-start,center);
+	cursor: pointer;
 	span {
 		color: $gray3;
 		font-size: 14px;
 		line-height: 1.5;
 		transition: $tr2;
 	}
+
 	&:hover {
 		text-decoration: none;
 		span {color: $black;}
 		.icon_rounded {
 			border-color: $yellow;
-			box-shadow: 0 0 1px 1px $yellow;
-			// transform: translateY(-4px);
+			box-shadow: 0 0 0 3px $yellow;
+			transform: translateY(-3px);
 		}
 	}
 }
@@ -33,6 +35,7 @@
 
 .shop-option__link-list {
 	@include flex-row(wrap,flex-start,center);
+	width: 100%; /*IE*/
 	a {
 		flex: 1 1 100%;
 		color: $gray3;
@@ -44,4 +47,30 @@
 			transform: translateX(3px);
 		}
 	}
+}
+
+// responsiveness
+@media screen and (max-width: 1200px) {
+	.shop-option {
+		@include flex-col(nowrap, flex-start, flex-start);
+		height: 94px; /*IE*/
+	}
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 992px) {
+	.shop-option {
+		@include flex-row(nowrap,center,center);
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 568px) {
+
 }

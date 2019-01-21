@@ -1,4 +1,32 @@
 .product-list-controls {
 	@include flex-row(nowrap, space-between, center);
-	margin: 0 0 2rem 0;
+	margin: -15px 0 20px 0;
+
+	.btn {display: none;}
+}
+
+@media screen and (max-width: 1200px) {
+	.product-list-controls {
+		.btn {
+			display: block;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.product-list-controls {
+		@include flex-row(wrap, space-between, center);
+		padding: 30px;
+		border: 1px solid $gray2;
+
+		.btn {
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin: 0 0 20px 0;
+			padding: 15px 0;
+			background-color: #efefef;
+			border: 2px solid transparent;
+		}
+	}
 }

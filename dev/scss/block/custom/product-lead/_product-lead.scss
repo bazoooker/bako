@@ -1,0 +1,25 @@
+.product-lead {
+	    // полноразмерная растажка без закрытия .container
+    position: relative;
+    z-index: 2;
+
+    padding: 90px 0;
+    margin: 0 0 100px 0;
+
+    .row { margin-bottom: 0; }
+
+    &::before {
+        @include pseudo;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 5000px;
+        z-index: -1;
+        background-color: $gray1;
+    }
+
+    h2 {
+    	margin-top: 0;
+    }
+}

@@ -1,0 +1,76 @@
+.view {
+	@include flex-row(nowrap,flex-start,center);
+
+	span {
+		display: inline-block;
+	    font-size: 14px !important;
+	    color: $gray3;
+	    margin-right: 20px;
+	}
+}
+
+.view__btn-group {
+	margin: 0 0 0 0;
+	font-size: 0;
+}
+
+.view-list,
+.view-image {
+	.i {
+		opacity: .5;
+	}
+
+	&:hover {
+		background-color: $gray1;
+		.i {opacity: .85;}
+	}
+
+	&.active {
+		background-color: $yellow;
+		.i { opacity: 1; }
+
+		&:hover {background-color: $yellow;}
+	}
+}
+
+.view-list {
+	position: relative;
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+	background-size: 15px;
+	transition: $tr;
+}
+.view-image {
+	position: relative;
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+	background-size: 15px;
+	transition: $tr;
+}
+
+// @media screen and (max-width: 1024px) {
+// 	.view {
+// 	    flex: 1 1 45%;
+// 	    @include flex-row(nowrap,center,center);
+// 	    margin: 0 0 0 0;
+// 		align-items: center;
+// 	    padding: 10px;
+// 	    background: #efefef;
+// 	}
+// }
+@media screen and (max-width: 600px) {
+	.view {
+		flex: 1 1 100%;
+		margin: 0 0 10px 0;
+
+		@include flex-row(wrap,center,center);
+
+		span {
+			flex: 1 1 100%;
+			text-align: center;
+			margin: 0 0 15px 0;
+		}
+	}
+}

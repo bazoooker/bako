@@ -2,3 +2,39 @@
 	.col-4 {padding-right: 40px}
 	.col-8 {padding-left: 40px}
 }
+
+
+
+@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 992px) and (min-width: 769px) {
+	.partners {
+		.col-8 {
+			.col-4:nth-of-type(8),
+			.col-4:nth-of-type(7),
+			.col-4:nth-of-type(6) {display: none;}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.partners {
+		.col-8 {
+			padding-left: 10px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 370px) {
+	.partners {
+		.col-8 {
+			.col-4 {
+				flex: 0 0 50%;
+				max-width: 50%;
+				&:nth-of-type(6) {display: none;}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 568px) {}
+@media screen and (max-width: 413px) {}

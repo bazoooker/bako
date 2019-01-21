@@ -18,24 +18,34 @@
 
 		&:last-child {margin-right:0;}
 		
-		// ВЕРНУТЬ!
-		
-			&:hover {
-				text-decoration: none;
-				color: black;
-				background-color: $gray2;
-				// &::before {width: 100%;}
-			}
-
-		// &::before {
-		// 	@include pseudo;
-		// 	left: 0;
-		// 	bottom: 0;
-		// 	height: 3px;
-		// 	width: 0%;
-		// 	background-color: $black;
-			
-		// 	transition: $tr2;
-		// }
+		&:hover {
+			text-decoration: none;
+			color: black;
+			background-color: $gray2;
+		}
 	}
 }
+
+
+
+
+@media screen and (max-width: 1200px) {
+	.nav {
+		a {
+			padding: 15px 15px;
+			font-size: 13px;
+		}
+	}
+}
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 992px) {
+	.nav {
+		a {
+			padding: 15px 8px;
+			font-size: 12px;
+		}
+	}
+}
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 568px) {}
+@media screen and (max-width: 413px) {}

@@ -6,9 +6,18 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 9;
-	// background-color: rgba(255,255,255,.5);
-	background-color: rgba(0,0,0,.9);
-
+	// background-color: rgba(0,0,0,.9);
 	display: none;
+}
+
+.overlay_catalog-menu {
+	z-index: 2;
+	background-color: rgba(0,0,0,.01);
+}
+
+.overlay_basket,
+.overlay_modal,
+.overlay_filters {
+	z-index: 10;
+	background-color: rgba(0,0,0,.8);
 }

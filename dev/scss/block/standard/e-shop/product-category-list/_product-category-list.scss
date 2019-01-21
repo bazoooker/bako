@@ -1,0 +1,15 @@
+.product-category-list {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+
+	a {
+		display: block;
+		margin: 9px 0;
+	}
+
+	&.active {
+		opacity: 1;
+		height: auto;
+	}
+}
