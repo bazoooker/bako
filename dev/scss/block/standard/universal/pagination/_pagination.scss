@@ -1,25 +1,79 @@
+$pagination-link-size: 40px;
+ 
+ 
 .pagination {
-	text-align: center;
+    display: inline-block;
+    margin: 0 auto;
 }
-
-.pagination__num {
-	display: inline-block;
-	padding: 1.5rem;
-	margin: 0 .5rem;
-	font-size: 1.6rem;
-	font-weight: 600;
-	cursor: pointer;
-
-	&:hover {
-		color: #fff;
-		background-image: url(/img/icons/i-octagon_disabled.png);
-		@include bg-contain;
-	}
+ 
+.pagination__holder {
+    @include flex-row(nowrap, center, center);
+    a:last-child {
+        margin: 0 0 0 0;
+    }
 }
-
-.pagination__num_active {
-	color: #fff;
-
-	background-image: url(/img/icons/i-octagon.png);
-	@include bg-contain;
+ 
+.pagination__heading {
+    display: block;
+    margin: 0 0 15px 0;
+ 
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+}
+ 
+.pagination-link {
+ 
+    flex: 0 0 $pagination-link-size;
+    height: $pagination-link-size;
+    line-height: $pagination-link-size;
+ 
+    margin: 0 5px 0 0;
+    padding: 0 8px 0 8px;
+    font-size: 13px;
+    color: #333;
+ 
+    // border: 1px solid $gray2;
+    background-color: $gray1;
+ 
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+ 
+    transition: $tr2;
+ 
+    &:visited,
+    &:active,
+    &:focus { color: #323232; }
+ 
+    &:hover {
+        background-color: $gray2;
+        text-decoration: none;
+    }
+}
+.pagination-link_number {}
+.pagination-link_number-current {
+    background-color: $gray3;
+    color: #fff;
+    border: 1px solid $gray3;
+    &:hover {
+        background-color: $gray3;
+        color: #fff;
+        border-right: 1px solid $gray3;
+        cursor: default;
+    }
+ 
+}
+.pagination-link_beginning { flex: 0 0 $pagination-link-size*2; }
+.pagination-link_end { flex: 0 0 $pagination-link-size*2; }
+.pagination-link_step-forward {}
+.pagination-link_step-backward {}
+.pagination-link_disabled {
+    opacity: .5;
+    color: gray;
+    font-weight: 100;
+    &:hover {
+        cursor: default;
+        background-color: #fff;
+    }
 }

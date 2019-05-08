@@ -3,19 +3,20 @@
 
 
 // block
-.btn {
+.btn, input.btn {
 	display: inline-block;
 	position: relative;	
 	overflow: hidden;
 	text-decoration: none !important;
 	font-weight: 600;
-	cursor: pointer;
+	cursor: pointer !important;
 	line-height: 100%;
 	text-transform: uppercase;
 
 	transition: $tr2;
 	&:hover {
 		text-decoration: none;
+		cursor: pointer !important;
 	}
 	&:visited {}
 }
@@ -28,7 +29,7 @@
 
 
 // styles
-.btn_main {
+.btn_main, input.btn_main {
 	// background-color: $color_main;
 	background-color: $yellow;
 	color: $black;
@@ -45,7 +46,7 @@
 
 
 // styles
-.btn_secondary {
+.btn_secondary, input.btn_secondary {
 	background-color: #ededed;
 	color: #006eb3 !important;
 	transition: all $tr2;
@@ -474,10 +475,6 @@
 
 
 
-input.btn {
-	border: 0;
-	outline: none;
-}
 
 .btn_download {
     display: inline-block;

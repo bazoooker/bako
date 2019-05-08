@@ -50,8 +50,10 @@
 	}
 	a {
 		font-size: 14px;
-		text-decoration: underline;
-		text-decoration-style: dashed;
+		text-decoration: none;
+		&:hover {
+			color: #333;
+		}
 	}
 }
 .product__call-to-action {

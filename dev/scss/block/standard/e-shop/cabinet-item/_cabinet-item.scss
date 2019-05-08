@@ -1,0 +1,48 @@
+.cabinet-item {
+	background-color: $gray1;
+	@include flex-row(nowrap,center,center);
+	transition: 400ms;
+
+	// элементы
+	&__body {
+		width: 100%;
+		text-align: center;
+		transition: 200ms;
+	}
+	&__link, &__link:visited, &__link:focus {
+		display: block;
+    	padding: 45px 10px;
+		color: #333;
+		text-decoration: none !important;
+		transition: 200ms;
+	}
+	&__icon {
+		display: block;
+		font-size: 30px;
+		margin: 0 0 10px 0;
+	}
+	&__name {
+		font-size: 20px;
+		transition: 200ms;
+	}
+
+	// состояния
+	
+	// эффекты
+	&:hover {
+		background-color: $gray2; 
+		 
+	}
+	&:hover &__icon {
+		animation: up-down 2.3s infinite;
+	}
+}
+
+
+
+
+@keyframes up-down {
+	0% {transform: translateY(0px);}
+	50% {transform: translateY(-6px);}
+	100% {transform: translateY(0px);}
+}
