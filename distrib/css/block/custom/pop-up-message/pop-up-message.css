@@ -1,0 +1,25 @@
+.pop-up-message {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  z-index: 3;
+  background: #ffd502;
+  padding: 10px 30px;
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: translateY(250px);
+  -ms-transform: translateY(250px);
+  transform: translateY(250px);
+  opacity: 0; }
+  .pop-up-message p {
+    color: black;
+    margin-bottom: 0 !important; }
+  .pop-up-message.visible {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    opacity: 1;
+    -webkit-transition: 200ms;
+    -o-transition: 200ms;
+    transition: 200ms; }

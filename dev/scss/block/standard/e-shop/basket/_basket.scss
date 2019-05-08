@@ -98,6 +98,14 @@
 
 }
 
+.basket__message {
+	padding: 40px;
+    background-color: gray;
+    margin: 40px -40px 0 -40px;
+
+    p {color: #fff;}
+}
+
 .basket__footer{
 	// поведение
 	@include flex-row(nowrap,space-between,center);
