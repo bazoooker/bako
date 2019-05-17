@@ -2,21 +2,30 @@
 	position: fixed;
 	height: 100%;
 	width: 600px;
-	
 	background-color: #fff;
 	z-index: 21;
-
 	transition: transform $tr2;
-
-
-	// изменяется
-	padding: 40px 40px;
 	overflow: hidden;
-
 	top: 0;
 	right: 0;
 	left: auto;
 	transform: translateX(101%);
+	background-image: url(/img/basket-modal-preloader.gif);
+   	background-repeat: no-repeat;
+   	background-position: 50%;
+
+   	&::-webkit-scrollbar {
+    width: 10px;
+	}
+	 
+	&::-webkit-scrollbar-track {
+	    background-color: transparent;
+	}
+	 
+	&::-webkit-scrollbar-thumb {
+	  background-color: #656565;
+	  outline: 1px solid #656565;
+	}
 
 	h3 {
 		position: relative;
@@ -43,11 +52,31 @@
 	}
 }
 
+.basket__header {
+	h3 {
+		position: relative;
+		padding: 0 0 0 60px;
+		& > span {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 40px;
+			height: 40px;
+		}
+	}
+}
+
+#basket-root {
+	padding: 40px;
+	background-color: #fff;
+	height: 100%;
+}
+
 
 .basket__btn-close {
 	position: absolute;
 	top: 33px;
-	right: 50px;
+	right: 33px;
 
 	width: 40px;
 	height: 40px;
@@ -110,7 +139,7 @@
 	// поведение
 	@include flex-row(nowrap,space-between,center);
 	margin: 0 -40px;
-	padding: 40px 125px 40px 40px;
+	padding: 40px 40px 40px 40px;
 
 	// стили
 	background-color: $gray3;
@@ -143,6 +172,7 @@
 		color: #fff;
 		font-weight: 600;
 	}
+
 
 
 @media screen and (max-width: 768px) {

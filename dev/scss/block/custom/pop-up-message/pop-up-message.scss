@@ -4,11 +4,12 @@
     bottom: 30px;
     z-index: 3;
     background: #ffd502;
-    padding: 10px 30px;
+    padding: 10px 25px;
 	
 	transform-origin: 50% 0;
     transform: translateY(250px);
     opacity: 0;
+    transition: 0ms;
 
     p {color: black;margin-bottom: 0 !important;}
 

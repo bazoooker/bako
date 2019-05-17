@@ -6,6 +6,12 @@
 	a {
 		display: block;
 		margin: 9px 0;
+		background: none;
+		&:hover,
+		&:active {
+			background: none;
+			text-decoration: underline;
+		}
 	}
 
 	&.active {

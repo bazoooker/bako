@@ -6,14 +6,21 @@
 
 	// стили
 	border-bottom: 1px solid $gray2;
+	background-color: #fff;
+// background-image: url(/img/basket-modal-preloader.gif);
+ //    background-repeat: no-repeat;
+ //    background-position: 50%;
 }
 
-.product-modal__info {}
+.product-modal__info {
+	// background-color: #fff;
+}
 .product-modal__name {
 	// поведение
 	display: block;
 	flex-grow: 1;
 	margin: 0 0 17px 0;
+	background: none;
 
 	// стили
 	color: $black;
@@ -22,6 +29,7 @@
 	text-transform: uppercase;
 
 	&:visited, &:active {color: black;}
+	&:hover {background: none;}
 }
 .product-modal__controls {
 	@include flex-row(nowrap,space-between,center);

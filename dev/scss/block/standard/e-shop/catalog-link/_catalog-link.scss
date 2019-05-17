@@ -21,11 +21,13 @@
 	display: block;
 	color: $black;
 	font-family: 'Exo 2', sans-serif;
+	font-weight: 800;
 	text-transform: uppercase;
 	@include font-kit(18px,18px,17px,16px,15px);
 	padding: 26px 60px 26px 26px;
 	border-bottom: 1px solid $gray2;
 	cursor: pointer;
+	word-break: break-word;
 
 
 	&::before {
@@ -61,6 +63,7 @@
 	&.active {
 		position: relative;
 		background-color: rgba(0,0,0,.075);
+		color: gray;
 		&:hover {
 			// color: $gray4;
 			background-color: none;

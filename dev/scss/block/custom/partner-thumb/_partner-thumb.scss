@@ -3,6 +3,7 @@
 	@include flex-row(nowrap,center,center);
 	border: 1px solid $gray2;
 	transition: $tr2;
+	background: none;
 	transition-delay: 30ms;
 
 	&:first-child {
@@ -15,6 +16,7 @@
 		opacity: .4;
 	}
 	&.blurred.active {background-color: $yellow; opacity: 1;}
+	&:hover {background: none;}
 }
 
 .partner-thumb__img-holder {

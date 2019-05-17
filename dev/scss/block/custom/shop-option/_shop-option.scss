@@ -1,7 +1,9 @@
-.shop-option {
+.shop-option,
+.shop-option:visited {
 	margin-right: 10px;
 	@include flex-row(nowrap,flex-start,center);
 	cursor: pointer;
+	background: none;
 	span {
 		color: $gray3;
 		font-size: 14px;
@@ -11,6 +13,7 @@
 
 	&:hover {
 		text-decoration: none;
+		background: none;
 		span {color: $black;}
 		.icon_rounded {
 			border-color: $yellow;

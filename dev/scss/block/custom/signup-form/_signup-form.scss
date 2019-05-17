@@ -4,7 +4,10 @@
 	flex-grow: 1;
 	&>.row {margin-bottom: 0}
 
-	a {color: $gray3; text-decoration: underline;}
+	a {
+		color: $gray3; text-decoration: none;
+
+	}
 }
 
 

@@ -1,0 +1,125 @@
+.product-full {
+	// поведение
+	@include flex-row(nowrap,flex-start,center);
+	padding: 20px 0;
+
+
+	// стили
+	border-bottom: 1px solid $gray2;
+}
+
+.product-full__info {
+	@include flex-row(nowrap,space-between,center);	
+	flex-grow: 1;
+}
+.product-full__name {
+	// поведение
+	display: block;
+	flex-grow: 1;
+	padding: 0 20px 0 0;
+	background: none;
+
+	// стили
+	color: $black;
+	@include font-kit(19px,18px,17px,15px,19px);
+	font-size: 19px;	font-weight: 600;
+	text-transform: uppercase;
+
+	&:visited, &:active {color: black; background: none;}
+	&:hover {background: none; text-decoration: underline; color: black;}
+}
+.product-full__controls {
+	@include flex-row(nowrap,space-between,center);
+}
+
+.product-full__price {
+	margin-right: 15px;
+	@include font-kit(20px,18px,16px,15px,18px);
+	font-weight: 600;
+	color: $black;
+	flex: 0 0 170px;
+	max-width: 170px; // IE
+	min-width: 170px; // IE
+	text-align: right;
+}
+
+.product-full__img {
+	// поведение
+	flex: 0 0 75px;
+	max-width: 75px; /*IE*/
+	height: 75px;
+	margin: 0 20px 0 0;
+
+	// стили
+	border: 2px solid transparent;
+	@include bg-contain;
+	transition: $tr2;
+
+
+	&:hover {
+		border: 2px solid $yellow;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.product-full {
+		// @include flex-row(wrap,flex-start,center);
+	}
+	.product-full__info {
+		@include flex-row(wrap,space-between,center);	
+	}
+	.product-full__name {
+		flex: 1 1 100%;
+		margin: 0 0 15px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.product-full__price {
+		flex: 0 0 140px;
+		max-width: 140px; // IE
+		min-width: 140px; // IE
+
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.product-full {
+		@include flex-row(wrap,center,center);
+		position: relative;
+
+		.basket-item-actions-remove {
+			position: absolute;
+		    top: 10px;
+		    right: 10px;
+		}
+	}
+	.product-full__price,
+	.product-full__info {
+		flex: 0 0 100%;
+		max-width: 100%; // IE
+		min-width: 100%; // IE
+		text-align: center;
+
+	}
+	.product-full__controls {
+		@include flex-row(wrap,space-between,center);
+		margin: 0 auto;
+	}
+	.product-full__price {
+		// поведение
+		flex: 1 1 100%;
+		max-width: 100%;
+
+		// стили
+		margin: 20px 0 0 0;
+	}
+	.product-full__img {
+		flex: 0 0 105px;
+		min-width: 105px;
+		height: 105px;
+		margin: 0 0 20px 0;
+	}
+}
+
+

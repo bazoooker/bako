@@ -7,6 +7,8 @@
     background-repeat: no-repeat;
     background-position: 50% 25%;
     transition: 400ms;
+    background: none;
+
     &:after,
     &:before {opacity: 0;}
 
@@ -35,10 +37,12 @@
     }
     &:visited {
         color: #fff;
+        background: none;
     }
     &:hover {
         color: $yellow;
         text-decoration: none;
+        background: none;
         
         &:before {
             transform: translateX(-50%);

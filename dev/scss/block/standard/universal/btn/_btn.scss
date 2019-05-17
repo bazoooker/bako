@@ -1,9 +1,6 @@
 
-
-
-
-// block
-.btn, input.btn {
+.btn, input.btn,
+.btn:visited, input.btn:visited{
 	display: inline-block;
 	position: relative;	
 	overflow: hidden;
@@ -12,25 +9,21 @@
 	cursor: pointer !important;
 	line-height: 100%;
 	text-transform: uppercase;
+	background: none;
 
 	transition: $tr2;
 	&:hover {
 		text-decoration: none;
 		cursor: pointer !important;
+		background: none;
 	}
-	&:visited {}
+	&:visited {
+		background: none;
+	}
 }
 
 
-
-
-
-
-
-
-// styles
 .btn_main, input.btn_main {
-	// background-color: $color_main;
 	background-color: $yellow;
 	color: $black;
 	border: 2px solid $yellow;
@@ -45,7 +38,6 @@
 }
 
 
-// styles
 .btn_secondary, input.btn_secondary {
 	background-color: #ededed;
 	color: #006eb3 !important;
@@ -64,133 +56,19 @@
 }
 
 
-
-// .btn_outline {
-// 	background-color: #fff;
-// 	color: $color_main;
-// 	border: 1px solid $color_main;
-// 	&:active,
-// 	&:visited 	{ color: $color_main; }
-// 	&:hover 	{ background-color: $color_main; color: #fff; }
-// 	&:focus 	{}
-// }
-
-// .btn_add-to-cart {
-// 	background-color: #fff;
-// 	color: $color_main;
-// 	border: 1px solid $color_main;
-// 	&:active,
-// 	&:visited 	{ color: $color_main; }
-// 	&:hover 	{ background-color: $color_main; color: #fff; }
-// 	&:focus 	{}
-// }
-
-.btn_icon {
-	position: relative;
-	text-align: center;
-
+.btn_outline {
 	background-color: #fff;
-	color: $color_main;
-	border: 1px solid $color_main;
-	color: $color_main;
-
+	color: #000;
+	border: 2px solid #000;
+	background: none;
+	&:active,
 	&:visited,
-	&:focus,
-	&:active {
-		color: $color_main;
-	}
-
-	&::before {
-		transition: $tr;
-	}
-
-
-	&.btn_icon-cart 	{
-		&::before {
-			background: url(/img/icons/i-cart.png) $color_main center center no-repeat;
-		}
-		&:hover::before {
-			width: 100%;
-		}
-	}
-	&.btn_icon-call 	{
-		&::before {
-			background: url(/img/icons/i-phone.png) $color_main center center no-repeat;
-		}
-		&:hover::before {
-			width: 100%;
-		}
-	}
-	&.btn_icon-email 	{
-		&::before {
-			background: url(/img/icons/i-envelope.png) $color_main center center no-repeat;
-		}
-		&:hover::before {
-			width: 100%;
-		}
-	}
-	&.btn_icon-submit 	{
-		&::before {
-			background: url(/img/icons/i-submit.png) $color_main center center no-repeat;
-		}
-		&:hover::before {
-			width: 100%;
-		}
-	}
-
-	&.btn_size-l {
-		padding-left: 50px+$gutter*1.75 !important;
-		&::before {
-			@include pseudo;
-			left: 0;
-			top: 0;
-
-			height: 100%;
-			width: 50px;
-			background-size: 25px;
-		}
-	}
-	&.btn_size-m {
-		padding-left: 45px+$gutter*1.5 !important;
-		&::before {
-			@include pseudo;
-			left: 0;
-			top: 0;
-
-			height: 100%;
-			width: 45px;
-			background-size: 20px;
-		}
-	}
-	&.btn_size-s {
-		padding-left: 40px+$gutter*1.25 !important;
-		&::before {
-			@include pseudo;
-			left: 0;
-			top: 0;
-
-			height: 100%;
-			width: 40px;
-			background-size: 17px;
-		}
-	}
-
-	// &:hover::before {
-	// 	background-color: #fff;
-	// }
-	// &:hover::after {
-	// 	background-color: #fff;
-	// 	background-image: url(/img/icons/i-cart_orange.png);
-	// 	background-position: 70% 50%;
-	// }
+	&:focus 	{ color: #000 !important; background: none; }
+	&:hover 	{ background: none; background-color: #000 !important; color: #fff !important; }
+	&:focus 	{}
 }
 
 
-
-
-
-
-// sizes
 
 .btn_size-l {
 	@include font-kit(17px, 17px, 17px, 16px, 15px);
@@ -202,12 +80,8 @@
 }
 .btn_size-s {
 	@include font-kit(14px, 14px, 13px, 13px, 12px);
-	padding: $gutter/2.8 $gutter*1.25;
+	padding: $gutter/3.5 $gutter*1.25;
 }
-
-
-
-
 
 
 
@@ -248,8 +122,6 @@
 
     }
     
-	// ВЕРНУТЬ
-
     &:hover {
     	color: #fff;
     	background-color: #666666;
@@ -271,14 +143,6 @@
 	cursor: pointer;
 	transition: $tr2;
 
-	// &::before {
-	// 	@include pseudo;
-	// 	left: 0;
-	// 	bottom: -4px;
-	// 	background-color: $black;		
-	// 	width: 100%;
-	// 	height: 4px;
-	// }
 
 	.i-cart {
 		left: 20px;
@@ -286,10 +150,19 @@
 		transform: translateY(-50%);
 	}
 
+	&.btn-basket_animated {
+		.i-cart {
+			left: 10px;
+		}
+	}
+
 	&:hover {
 		background-color: #ffee99;
 	}
 }
+
+
+
 .btn-basket__text {
 	display: inline-block;
 	margin: 0 8px 0 0;
@@ -311,15 +184,6 @@
 
 
 
-
-
-
-
-
-
-// burger button
-
-
 .btn-burger {
 	@include flex-row(wrap, center, center);
 	width: 60px;
@@ -331,7 +195,6 @@
     transition: 200ms;
     padding: 16px 16px;
 
-    // change
 	background-color: transparent;
 }
 .btn-burger__bar {
@@ -341,201 +204,7 @@
 	background-color: $black;
     transition: $tr;
 
-    // 	&:last-child { margin-bottom: 0; }
-
-    // 	&:nth-child(1):after {
-    // 		transition-delay: 100ms;
-    // 	}
-    // 	&:nth-child(2):after {
-    // 		transition-delay: 200ms;
-    // 	}
-    // 	&:nth-child(3):after {
-    // 		transition-delay: 300ms;
-    // 	}
-
-    // &:after {
-    // 	@include pseudo;
-    // 	width: 0%;
-    // 	height: 100%;
-    // 	z-index: 4;
-
-    // 	transition: $tr;
-    // }
 }
-
-
-
-
-
-
-
-
-// .btn_one-click {
-// 	flex: 1 1 50%;
-
-// 	@include flex-row(nowrap, flex-start, center);
-// 	background-color: transparent;
-
-// 	padding: .8rem .8rem .8rem .8rem;
-// 	border: 2px solid transparent;
-// 	line-height: 1.8rem;
-// 	transition: $tr;
-
-// 	font-size: 1.1rem;
-// 	text-transform: uppercase;
-
-// 	&:visited span {color: #514f53;}
-// 	&:active span {color: #514f53;}
-
-
-// 	span {
-// 		display: inline-block;
-// 		margin: 0 auto;
-// 		position: relative;
-
-// 		font-size: 1.2rem;
-// 		font-weight: 600;
-// 		text-transform: uppercase;
-// 		color: #514f53;
-// 		transition: $tr;
-
-
-
-// 		&::before {
-// 			@include pseudo;
-// 			width: 100%;
-// 			height: 1px;
-// 			left: 0;
-// 			bottom: -.5rem;
-// 			background-color: $color_font;
-// 			background-color: rgba(0,0,0,.1);
-// 		}
-// 	}
-
-// 	&:hover span::before {
-// 		display: none;
-// 	}
-// 	&:hover span {
-// 		color: #000;
-// 	}
-// 	&:hover {
-// 		background-color: #eaeaea;
-// 	}
-
-// }
-
-
-
-
-.btn_metal {
-	position: relative;
-    background-image: url(/img/bg/bg-btn.jpg);
-    padding: 1rem 3.5rem;
-    font-size: 1.6rem;
-    color: #fff;
-    font-weight: 400;
-
-    &:visited,
-	&:active {
-		color: #fff;
-	}
-
-    &:hover::after {
-    	height: 100%;
-    }
-
-    &::after {
-    	@include pseudo;
-    	left: 0;
-    	top: 0;
-    	width: 100%;
-    	height: 0%;
-    	background-color: rgba(255,255,255,.3);
-
-    	transition: $tr;
-    }
-}
-
-
-
-
-
-
-
-// ======================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-.btn_download {
-    display: inline-block;
-    margin: 0 .5rem .5rem 0;
-    position: relative;
-    padding: 1rem;
-    text-decoration: none;
-    padding-left: 0;
-    padding: 2rem;
-    color: #ffffff;
-    -webkit-transition: 200ms;
-    -o-transition: 200ms;
-    text-decoration: underline;
-    /* background: #2987bf; */
-    background: url(/img/icons/i-download.png) #25af69 no-repeat;
-    background-size: 2rem;
-    background-position: 1.5rem center;
-    padding: 1rem 2rem 1rem 5rem;
-    text-decoration: none;
-
-    &:visited,
-    &:active,
-    &:focus {
-    	color: #ffffff;
-    }
-}
-
-.btn_back {
-    background-image: url(/img/icons/i-arrow-left_white.png);
-    background-repeat: no-repeat;
-    background-size: 1.9rem;
-    background-position: 15px center;
-    padding-left: 50px;
-    line-height: 150%;
-    transition: 200ms;
-    padding: .4rem 1.8rem .4rem 4.5rem;
-    font-size: 1.4rem;
-
-    &:visited,
-    &:active,
-    &:focus {
-    	color: #ffffff;
-    }
-
-    &:hover {
-    	background-position: 10px center;
-    }
-}
-
-
-
-@keyframes arrowBounceDown {
-	0% {}
-	50% {
-		transform: translateY(-20%) rotate(45deg);
-	}
-	100% {}
-}
-
-
-
 
 
 @media screen and (max-width: 1200px) {

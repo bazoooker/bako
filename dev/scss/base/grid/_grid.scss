@@ -94,6 +94,8 @@
 	padding: 80px 0;
 }
 
+.table-resp {}
+
 
 .max-width-full {
 	max-width: 100% !important;
@@ -204,6 +206,11 @@
 	max-width: 100% !important;
 }
 
+.table-resp {
+	width: 100%;
+	&__arrows {display: none;}
+}
+
 
 @media screen and (max-width: 992px) {
 	.col-10 {
@@ -256,7 +263,24 @@
 }
 
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+	.table-resp {
+		overflow: auto;
+		margin: 0 0 40px 0;
+		border: 1px solid lightgray;
+		&__arrows {
+			display: block;
+			padding: 10px;
+			text-align: center;
+			color: lightgray;
+			font-size: 14px;
+		}
+		table {
+			margin: 0;
+			width: 1200px;
+		}
+	}
+}
 @media screen and (max-width: 1024px) {}
 @media screen and (max-width: 992px) {}
 @media screen and (max-width: 768px) {}

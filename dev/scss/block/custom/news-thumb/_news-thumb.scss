@@ -1,8 +1,14 @@
 .news-thumb {
-	display: inline-block;
+	display: block;
 	padding: 20px;
+	background: none;
+	height: 100%;
+	border: 1px solid #ededed;
+	transition: 300ms;
 	&:hover {
 		text-decoration: none;
+		background: none;
+		box-shadow: 0 0 0px 8px $yellow;
 	}
 	&:hover {
 		.news-thumb__img-inner {
@@ -17,12 +23,23 @@
 	}
 }
 
-.news-thumb_txt-only { padding: 20px 0 20px 10px; margin-bottom: 10px; }
+.news-thumb_txt-only { 
+	padding: 20px 0 20px 10px; 
+	margin-bottom: 10px; 
+	height: auto;
+	box-shadow: none;
+	border: 0;
+	&:hover {
+		box-shadow: none;
+		text-decoration: underline;
+		border: 0;
+	}
+}
 
 .news-thumb__img {
 	position: relative;
 	height: 220px;
-	margin: 0 -10px 30px -10px;
+	margin: 0 0px 30px 0px;
 	overflow: hidden;
 
 }

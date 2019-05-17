@@ -4,14 +4,17 @@
   bottom: 30px;
   z-index: 3;
   background: #ffd502;
-  padding: 10px 30px;
+  padding: 10px 25px;
   -webkit-transform-origin: 50% 0;
   -ms-transform-origin: 50% 0;
   transform-origin: 50% 0;
   -webkit-transform: translateY(250px);
   -ms-transform: translateY(250px);
   transform: translateY(250px);
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: 0ms;
+  -o-transition: 0ms;
+  transition: 0ms; }
   .pop-up-message p {
     color: black;
     margin-bottom: 0 !important; }

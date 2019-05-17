@@ -60,17 +60,18 @@
 // 	    background: #efefef;
 // 	}
 // }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 	.view {
-		flex: 1 1 100%;
-		margin: 0 0 10px 0;
+		display: none;
+		// flex: 1 1 100%;
+		// margin: 0 0 10px 0;
 
-		@include flex-row(wrap,center,center);
+		// @include flex-row(wrap,center,center);
 
-		span {
-			flex: 1 1 100%;
-			text-align: center;
-			margin: 0 0 15px 0;
-		}
+		// span {
+		// 	flex: 1 1 100%;
+		// 	text-align: center;
+		// 	margin: 0 0 15px 0;
+		// }
 	}
 }

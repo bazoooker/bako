@@ -16,6 +16,9 @@
 	text-decoration: none;
 	transition: $tr2;
 	opacity: .85;
+	background: none;
+	&:visited,&:active,&:focus {background: none;}
+	&:hover {background: none; text-decoration: underline;}
 
 	&:visited {color: #808080;}
 
