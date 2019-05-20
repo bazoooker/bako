@@ -13,6 +13,7 @@
 }
 
 .product-modal__info {
+	flex-grow: 1;
 	// background-color: #fff;
 }
 .product-modal__name {
@@ -46,7 +47,7 @@
 	flex: 0 0 75px;
 	max-width: 75px; /*IE*/
 	height: 75px;
-	margin: 0 0 0 10px;
+	margin: 0 10px 0 10px;
 
 	// стили
 	border: 2px solid transparent;

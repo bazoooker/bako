@@ -28,6 +28,7 @@
 	border-bottom: 1px solid $gray2;
 	cursor: pointer;
 	word-break: break-word;
+	transition: all 300ms;
 
 
 	&::before {

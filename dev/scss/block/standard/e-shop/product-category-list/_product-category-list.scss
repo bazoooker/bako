@@ -2,6 +2,8 @@
 	opacity: 0;
 	height: 0;
 	overflow: hidden;
+	transform: translateX(8px);
+	transition: 300ms;
 
 	a {
 		display: block;
@@ -17,5 +19,6 @@
 	&.active {
 		opacity: 1;
 		height: auto;
+		transform: translateX(0);
 	}
 }

@@ -10,8 +10,10 @@
 .lead {
     padding: 40px;
     margin: 40px 0;
-    box-shadow: 0 0 35px 3px rgba(0, 0, 0, 0.23);
-    background-color: #fff;
+    background-color: whitesmoke;
+    border-left: 5px solid $yellow;
+    color: #666;
+    @include font-kit(23px, 22px,20px,18px,20px);
 
     h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child {margin-top: 0;}
     p:last-child {margin-bottom: 0;}
@@ -111,6 +113,10 @@
     &:before {
         background-color: $yellow;
     }
+}
+
+.stretch_big {
+    padding: 40px 0;
 }
 
 .section {

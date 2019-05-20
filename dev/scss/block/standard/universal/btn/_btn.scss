@@ -10,15 +10,23 @@
 	line-height: 100%;
 	text-transform: uppercase;
 	background: none;
-
 	transition: $tr2;
+
 	&:hover {
 		text-decoration: none;
 		cursor: pointer !important;
-		background: none;
 	}
-	&:visited {
-		background: none;
+
+	&.disabled {
+		background-color: lightgray !important;
+		color: #333 !important;
+		cursor: not-allowed !important;
+		opacity: .85;
+		border: 2px solid gray;
+		&:hover {
+			border: 2px solid #666;
+			opacity: 1;
+		}
 	}
 }
 
@@ -28,24 +36,26 @@
 	color: $black;
 	border: 2px solid $yellow;
 	transition: all $tr2;
+	cursor: pointer;
 	&:active,
-	&:visited 	{ color: $black; }
+	&:focus 	{ color: $black; background-color: #fff;}
 	&:hover 	{ 
 		background-color: #fff;
 		border: 2px solid $black; 
 	}
-	&:focus 	{}
+	&:visited {color: $black;}
 }
 
 
 .btn_secondary, input.btn_secondary {
 	background-color: #ededed;
-	color: #006eb3 !important;
+	color: #666;
 	transition: all $tr2;
 	font-size: 16px;
 	font-weight: 400;
 	text-transform: none;
 		border: 2px solid #ededed; 
+		cursor: pointer;
 	&:active,
 	&:visited 	{ color: #006eb3; }
 	&:hover 	{ 
@@ -129,7 +139,12 @@
     		color: #fff;
     		animation: arrowBounceDown $tr2 ease;
     	}
-    	.i-burger__bar {background-color: #fff;}
+    	.i-burger__bar {
+    		background-color: #fff;
+    		&:nth-child(1) {width: 100%;}
+    		&:nth-child(2) {width: 95%;}
+    		&:nth-child(3) {width: 65%;}
+    	}
     }
 }
 
