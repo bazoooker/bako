@@ -1854,6 +1854,7 @@ a.page-footer__company-info-item:hover {
       height: 100%;
       padding: 0 30px 0 0;
       margin: 0 0 0 0;
+      background-image: url(/img/logo_white.png);
       background-position: left center;
       background-color: #808080;
       background-size: 79%; }
@@ -6215,12 +6216,12 @@ div.title-search-result {
   background: none;
   height: 100%;
   border: 1px solid #ededed;
+  background-color: #fff;
   -webkit-transition: 300ms;
   -o-transition: 300ms;
   transition: 300ms; }
   .news-thumb:hover {
     text-decoration: none;
-    background: none;
     -webkit-box-shadow: 0 0 0px 8px #ffd503;
     box-shadow: 0 0 0px 8px #ffd503; }
   .news-thumb:hover .news-thumb__img-inner {

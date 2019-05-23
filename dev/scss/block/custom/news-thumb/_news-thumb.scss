@@ -4,10 +4,10 @@
 	background: none;
 	height: 100%;
 	border: 1px solid #ededed;
+	background-color: #fff;
 	transition: 300ms;
 	&:hover {
 		text-decoration: none;
-		background: none;
 		box-shadow: 0 0 0px 8px $yellow;
 	}
 	&:hover {
