@@ -1,5 +1,5 @@
 .breadcrumbs {
-	@include flex-row(nowrap,flex-start,center);
+	@include flex-row(wrap,flex-start,center);
 	background-color: transparent;
 	padding: 6px 4px;
 	z-index: 2;
