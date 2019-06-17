@@ -2358,10 +2358,14 @@ a.page-footer__company-info-item:hover {
   border: 2px solid #ededed;
   cursor: pointer; }
   .btn_secondary:active, .btn_secondary.nice-select.open, .btn_secondary:visited, input.btn_secondary:active, input.btn_secondary.nice-select.open, input.btn_secondary:visited {
-    color: #006eb3; }
+    color: #666; }
   .btn_secondary:hover, input.btn_secondary:hover {
     background-color: #fff;
     border-color: #cccccc; }
+  .btn_secondary:focus, input.btn_secondary:focus {
+    background-color: #ededed;
+    color: #666;
+    color: #006eb3; }
 
 .btn_outline {
   background-color: #fff;
@@ -2423,6 +2427,48 @@ a.page-footer__company-info-item:hover {
   @media screen and (max-width: 568px) {
     .btn_size-s {
       font-size: 12px; } }
+
+.btn-category {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  overflow: visible;
+  padding-right: 60px; }
+
+.btn-category__count {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 35px;
+  background-color: #dedede;
+  color: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px; }
 
 .btn-catalog {
   position: relative;
@@ -7564,6 +7610,7 @@ div.title-search-result {
 @media screen and (max-width: 600px) {
   .sort {
     width: 100%;
+    min-width: 200px;
     margin: 0px 0 20px 0;
     padding: 15px 15px;
     background-color: #f7f7f7; }
@@ -7837,6 +7884,7 @@ div.title-search-result {
 @media screen and (max-width: 600px) {
   .sort {
     width: 100%;
+    min-width: 200px;
     margin: 0px 0 20px 0;
     padding: 15px 15px;
     background-color: #f7f7f7; }

@@ -57,12 +57,16 @@
 		border: 2px solid #ededed; 
 		cursor: pointer;
 	&:active,
-	&:visited 	{ color: #006eb3; }
+	&:visited 	{ color: #666; }
 	&:hover 	{ 
 		background-color: #fff;
 		border-color: $gray2;
 	}
-	&:focus 	{}
+	&:focus 	{
+		background-color: #ededed;
+		color: #666;
+		color: #006eb3;
+	}
 }
 
 
@@ -91,6 +95,27 @@
 .btn_size-s {
 	@include font-kit(14px, 14px, 13px, 13px, 12px);
 	padding: $gutter/3.5 $gutter*1.25;
+}
+
+
+.btn-category {
+	position: relative;
+	@include flex-row(nowrap,flex-start,center);
+	height: 100%;
+	overflow: visible;
+	padding-right: 60px
+}
+.btn-category__count {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 35px;
+	background-color: #dedede;
+	color: #666;
+	@include flex-row(nowrap,center,center);
+	font-size: 12px;
+
 }
 
 

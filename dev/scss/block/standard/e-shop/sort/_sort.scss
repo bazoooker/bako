@@ -34,17 +34,6 @@
 .sort__link {
 	position: relative;
 	padding: 6px 10px;
-
-	// &::before {
-	// 	@include pseudo;
-
-	// 	width: 6px;
-	// 	height: 6px;
-
-	// 	left: 0;
-
-	// 	@include bg-contain;
-	// }
 }
 
 .sort__link_name,
@@ -70,48 +59,10 @@
 	}
 }
 
-// .sort__link_price {}
-// .sort__link_price_cheap-first {}
-// .sort__link_price_expen-first {}
-
-// .sort__link_avail {
-// 	&::before {
-// 		top: 50%;
-// 		transform: translateY(-50%);
-// 		border-radius: 50%;
-//     	transition: $tr;
-// 	}
-// }
-// .sort__link_avail-y {
-// 	&::before {
-// 		border: 1px solid #989898;
-// 		background-color: #989898;
-// 	}
-// }
-// .sort__link_avail-n {
-// 	&::before {
-// 		border: 1px solid #989898;
-// 		background-color: #fff;
-// 	}
-// }
-
-
-
-
-
-// @media screen and (max-width: 992px) {
-// 	.sort {
-// 	    flex: 1 1 100%;
-// 	    text-align: center;
-// 	    margin: 1rem 0 0;
-// 	    padding: 2rem;
-// 	    background: #efefef;
-// 	}
-// }
-
 @media screen and (max-width: 600px) {
 	.sort {
 		width: 100%;
+		min-width: 200px;
 		margin: 0px 0 20px 0;
 		padding: 15px 15px;
 		background-color: #f7f7f7;
@@ -134,14 +85,3 @@
 	    .sort__link:last-of-type {margin-bottom: 5px;}
 	}
 }
-
-// @media screen and (max-width: 413px) {
-// 	.sort {
-// 		a.active {
-// 			color: $color_main;
-// 			&::after {
-// 				display: none;
-// 			}
-// 		}
-// 	}
-// }
