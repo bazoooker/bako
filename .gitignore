@@ -1,2 +1,2 @@
-node_modules
-distrib\css\sftp-config.json
+/node_modules
+/distrib/css/sftp-config.json
